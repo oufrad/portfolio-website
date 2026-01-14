@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="generator" content="Eleventy v3.1.2">
+
+    <title>Articles | stefanzweifel.dev</title>
+    <meta name="title" content="Articles" />
+
+    <meta name="fediverse:creator" content="@stefanzweifel@phpc.social" />
+
+
+
+    <meta name="description" content="Articles on programming, software development and tools I&#39;m using day to day." />
+    <meta property="og:description" content="Articles on programming, software development and tools I&#39;m using day to day." />
+    <meta property="twitter:description" content="Articles on programming, software development and tools I&#39;m using day to day." />
+
+
+
+
+    <meta property="og:image" content="https://stefanzweifel.dev/assets/articles-9dadd02f-1b48-4962-ab17-db9a7266890b.png" />
+    <meta property="twitter:image" content="https://stefanzweifel.dev/assets/articles-9dadd02f-1b48-4962-ab17-db9a7266890b.png" />
+
+
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://stefanzweifel.dev/posts/" />
+    <meta property="og:title" content="Articles" />
+
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://stefanzweifel.dev/posts/" />
+    <meta property="twitter:title" content="Articles" />
+
+    <meta name="robots" content="index,follow">
+    <meta name="google-site-verification" content="LIcRaaOJ4Pzt395oKRAn1KhZrIJZ11CWzoBEyNoOHS4">
+
+    <link rel="canonical" href="https://stefanzweifel.dev/posts/">
+    <link rel="author" href="https://stefanzweifel.dev/humans.txt">
+
+
+    <link rel="me" href="https://twitter.com/_stefanzweifel">
+    <link rel="me" href="https://github.com/stefanzweifel">
+
+
+
+    <script type="application/ld+json">
+        {
+            "name": "Stefan Zweifel",
+            "description": "Stefan Zweifel is a full stack developer based in Zürich, Switzerland.",
+            "author": {
+                "@type": "Person",
+                "name": "Stefan Zweifel"
+            },
+            "@type": "WebSite",
+            "url": "https://stefanzweifel.dev",
+            "image": "https://stefanzweifel.dev/assets/images/avatar.jpg",
+            "headline": "Stefan Zweifel",
+            "sameAs": [
+                "https://phpc.social/@stefanzweifel",
+                "https://twitter.com/_stefanzweifel",
+                "https://github.com/stefanzweifel"
+            ],
+            "@context": "http://schema.org"
+        }
+    </script>
+
+
+
+    <meta name="theme-color" content="#FFFFFF">
+
+
+    <link rel="preconnect" href="//stats.wnx.ch">
+    <link rel="dns-prefetch" href="//stats.wnx.ch">
+
+    <!-- Fathom - simple website analytics - https://github.com/usefathom/fathom -->
+    <script>
+        (function(f, a, t, h, o, m) {
+            a[h] = a[h] || function() {
+                (a[h].q = a[h].q || []).push(arguments)
+            };
+            o = f.createElement('script'),
+                m = f.getElementsByTagName('script')[0];
+            o.async = 1;
+            o.src = t;
+            o.id = 'fathom-script';
+            m.parentNode.insertBefore(o, m)
+        })(document, window, '//stats.wnx.ch/tracker.js', 'fathom');
+        fathom('set', 'siteId', 'BSSXI');
+        fathom('trackPageview');
+    </script>
+    <!-- / Fathom -->
+
+
+
+    <link rel="stylesheet" crossorigin href="/assets/app-CoELDvZN.css">
+</head>
+
+<body class="bg-white text-slate-900 relative font-sans selection:text-[#160404] selection:bg-[#fef4ad]">
+
+    <div class="flex h-[2px] w-full">
+        <div class="w-full flex-none blur-sm bg-gradient-pride"></div>
+        <div class="-ml-[100%] w-full flex-none blur-[1px] bg-gradient-pride"></div>
+        <div class="-ml-[100%] w-full flex-none blur-sm bg-gradient-pride"></div>
+        <div class="-ml-[100%] w-full flex-none blur-[1px] bg-gradient-pride"></div>
+    </div>
+
+
+    <a class="absolute top-auto left-[-999px] overflow-hidden w-px h-px font-semibold bg-gray-900 text-gray-200 px-2 py-1 rounded shadow shadow-gray-500/20 ring-2 ring-red-500 ring-offset-2 ring-offset-red-100 focus:overflow-auto focus:w-auto focus:h-auto focus:top-5 focus:left-5 focus:z-50"
+        href="#skip-content-target">
+    Skip to content &darr;
+</a>
+
+    <div class="container mx-auto max-w-2xl">
+        <header class="mt-8 mb-24 md:flex justify-between items-center px-4 md:px-0">
+            <div class="font-medium">
+                <a href="/" class="inline-block -ml-2 px-2 py-1 rounded-lg font-semibold hover:bg-gray-100 transition">
+                Stefan Zweifel
+            </a>
+            </div>
+
+            <nav class="text-sm text-slate-600 font-medium space-x-4">
+                <a href="/about/" class="underline hover:no-underline">About</a>
+                <a href="/articles/" class="underline hover:no-underline">Articles</a>
+                <a href="/projects/" class="underline hover:no-underline">Projects</a>
+                <a href="/uses/" class="underline hover:no-underline">Uses</a>
+                <a href="/reading/" class="underline hover:no-underline">Reading</a>
+            </nav>
+
+        </header>
+
+        <div id="skip-content-target" class="hidden" tabindex="-1"></div>
+        <main class="px-4 md:px-0">
+
+            <div class="prose mb-10">
+                <h1>Articles</h1>
+                <p>
+                    <svg class="inline w-5 h-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
+              <path fill-rule="evenodd" d="M3.75 4.5a.75.75 0 0 1 .75-.75h.75c8.284 0 15 6.716 15 15v.75a.75.75 0 0 1-.75.75h-.75a.75.75 0 0 1-.75-.75v-.75C18 11.708 12.292 6 5.25 6H4.5a.75.75 0 0 1-.75-.75V4.5Zm0 6.75a.75.75 0 0 1 .75-.75h.75a8.25 8.25 0 0 1 8.25 8.25v.75a.75.75 0 0 1-.75.75H12a.75.75 0 0 1-.75-.75v-.75a6 6 0 0 0-6-6H4.5a.75.75 0 0 1-.75-.75v-.75Zm0 7.5a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z" clip-rule="evenodd"></path>
+            </svg> Subscribe via
+                    <a href="/rss.xml" class="underline hover:no-underline">RSS</a>.
+                </p>
+            </div>
+
+
+            <section>
+
+
+                <h2 class="mb-3 text-base font-black">2025</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2025/12/31/recap-2025/" aria-label="Recap 2025 published on Wed Dec 31 2025 17:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Recap 2025
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Dec 31 2025 17:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Dec 31 2025 17:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Dec 31 2025 17:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2025-12-31
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2025/02/02/introducing-laravle-tfa-confirmation/" aria-label="Introducing laravel-tfa-confirmation published on Sun Feb 02 2025 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing laravel-tfa-confirmation
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Feb 02 2025 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Feb 02 2025 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Feb 02 2025 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2025-02-02
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2024</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/12/31/recap-2024/" aria-label="Recap 2024 published on Tue Dec 31 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Recap 2024
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 31 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 31 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 31 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-12-31
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/11/15/on-founding-the-swiss-laravel-association/" aria-label="On Founding the Swiss Laravel Association published on Fri Nov 15 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            On Founding the Swiss Laravel Association
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Fri Nov 15 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Fri Nov 15 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Fri Nov 15 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-11-15
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/08/03/deployer-build-and-cache-frontend-assets-once-using-github-actions/" aria-label="Deployer: Build and Cache Frontend Assets once using GitHub Actions published on Sat Aug 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Deployer: Build and Cache Frontend Assets once using GitHub Actions
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Aug 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Aug 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Aug 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-08-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/06/03/how-i-use-shiki-in-eleventy/" aria-label="How I use Shiki in Eleventy published on Mon Jun 03 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How I use Shiki in Eleventy
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Jun 03 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Jun 03 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Jun 03 2024 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-06-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/05/25/incremental-backups-with-borg-backup/" aria-label="Incremental Backups with Borg Backup published on Sat May 25 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Incremental Backups with Borg Backup
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat May 25 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat May 25 2024 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat May 25 2024 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-05-25
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/05/20/migrating-from-laravel-to-eleventy/" aria-label="Migrating from Laravel to Eleventy published on Mon May 20 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Migrating from Laravel to Eleventy
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon May 20 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon May 20 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon May 20 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-05-20
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/03/09/meal-planning-in-things-3/" aria-label="Meal Planning in Things 3 published on Sat Mar 09 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Meal Planning in Things 3
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Mar 09 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Mar 09 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Mar 09 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-03-09
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/03/03/my-reusable-github-actions-workflows/" aria-label="My Reusable GitHub Actions Workflows published on Sun Mar 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            My Reusable GitHub Actions Workflows
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 03 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-03-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/02/14/laracon-eu-2024/" aria-label="Laracon EU 2024 published on Wed Feb 14 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laracon EU 2024
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Feb 14 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Feb 14 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Feb 14 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-02-14
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2024/01/02/app-defaults/" aria-label="App Defaults published on Tue Jan 02 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            App Defaults
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jan 02 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jan 02 2024 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jan 02 2024 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2024-01-02
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2023</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/12/27/recap-2023/" aria-label="Recap 2023 published on Wed Dec 27 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Recap 2023
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Dec 27 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Dec 27 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Dec 27 2023 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-12-27
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/12/17/lifes-wake-up-call-into-reality/" aria-label="Life&#39;s Wake-Up Call into Reality published on Sun Dec 17 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Life&#39;s Wake-Up Call into Reality
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Dec 17 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Dec 17 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Dec 17 2023 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-12-17
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/10/29/spatielaravel-data-is-probably-the-best-way-to-store-settings-in-your-laravel-app/" aria-label="Why you should use spatie/laravel-data to store &quot;settings&quot; in your Laravel app published on Sun Oct 29 2023 12:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Why you should use spatie/laravel-data to store &quot;settings&quot; in your Laravel app
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Oct 29 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Oct 29 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Oct 29 2023 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-10-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/09/16/an-opinionated-personal-folder-structure/" aria-label="An Opinionated Personal Folder Structure published on Sat Sep 16 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            An Opinionated Personal Folder Structure
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Sep 16 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Sep 16 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Sep 16 2023 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-09-16
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/08/26/redirect-domain-on-laravel-forge-using-nginx-while-preserving-lets-encrypt-certificate/" aria-label="Redirect Domain on Laravel Forge using NGINX while preserving Let&#39;s Encrypt Certificate published on Sat Aug 26 2023 12:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Redirect Domain on Laravel Forge using NGINX while preserving Let&#39;s Encrypt Certificate
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Aug 26 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Aug 26 2023 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Aug 26 2023 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-08-26
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/06/15/introducing-laravel-backup-restore/" aria-label="Introducing laravel-backup-restore published on Thu Jun 15 2023 19:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing laravel-backup-restore
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Jun 15 2023 19:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Jun 15 2023 19:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Jun 15 2023 19:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-06-15
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/01/30/local-environment-seeders-in-laravel/" aria-label="Local Environment Seeders in Laravel published on Mon Jan 30 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Local Environment Seeders in Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Jan 30 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Jan 30 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Jan 30 2023 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-01-30
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2023/01/24/a-new-home-for-my-website/" aria-label="A new home for my website published on Tue Jan 24 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            A new home for my website
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jan 24 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jan 24 2023 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jan 24 2023 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2023-01-24
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2022</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/12/27/recap-2022/" aria-label="Recap 2022 published on Tue Dec 27 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Recap 2022
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 27 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 27 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 27 2022 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-12-27
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/12/18/my-updated-things-3-setup/" aria-label="My updated Things 3 Setup published on Sun Dec 18 2022 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            My updated Things 3 Setup
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Dec 18 2022 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Dec 18 2022 18:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Dec 18 2022 18:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-12-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/11/13/on-building-the-what-are-you-doing-with-your-life-visualisation/" aria-label="Building the &quot;What Are You Doing With Your Life&quot; Visualisation published on Sun Nov 13 2022 12:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Building the &quot;What Are You Doing With Your Life&quot; Visualisation
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Nov 13 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Nov 13 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Nov 13 2022 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-11-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/09/04/migrating-from-jigsaw-to-laravel/" aria-label="Migrating from Jigsaw to Laravel published on Sun Sep 04 2022 14:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Migrating from Jigsaw to Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Sep 04 2022 14:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Sep 04 2022 14:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Sep 04 2022 14:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-09-04
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/08/08/review-of-the-benq-screenbar/" aria-label="Review: BenQ ScreenBar published on Mon Aug 08 2022 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Review: BenQ ScreenBar
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Aug 08 2022 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Aug 08 2022 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Aug 08 2022 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-08-08
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/07/02/create-a-mix-manifestjson-file-with-esbuild/" aria-label="Create a mix-manifest.json file with esbuild published on Sat Jul 02 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Create a mix-manifest.json file with esbuild
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Jul 02 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Jul 02 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Jul 02 2022 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-07-02
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/06/21/introducing-sidecar-browsershot/" aria-label="Introducing sidecar-browsershot published on Tue Jun 21 2022 20:58:45 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing sidecar-browsershot
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jun 21 2022 20:58:45 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jun 21 2022 20:58:45 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jun 21 2022 20:58:45 GMT+0000 (Coordinated Universal Time)">
+                                    2022-06-21
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/05/29/use-laravels-http-client-with-facebooks-business-sdk/" aria-label="Use Laravel&#39;s HTTP Client with Facebook&#39;s Business SDK published on Sun May 29 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Use Laravel&#39;s HTTP Client with Facebook&#39;s Business SDK
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun May 29 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun May 29 2022 12:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun May 29 2022 12:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2022-05-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2022/04/18/migrating-from-google-photos-to-apple-photos/" aria-label="Migrating from Google Photos to Apple Photos published on Mon Apr 18 2022 15:08:57 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Migrating from Google Photos to Apple Photos
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Apr 18 2022 15:08:57 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Apr 18 2022 15:08:57 GMT+0000 (Coordinated Universal Time)" datetime="Mon Apr 18 2022 15:08:57 GMT+0000 (Coordinated Universal Time)">
+                                    2022-04-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2021</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/12/14/running-tightens-jigsaw-on-vercel/" aria-label="Running Tighten&#39;s Jigsaw on Vercel published on Tue Dec 14 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Running Tighten&#39;s Jigsaw on Vercel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 14 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 14 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 14 2021 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-12-14
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/11/13/dear-maintainer-please-keep-a-changelog/" aria-label="Dear Maintainer, Please Keep a Changelog published on Sat Nov 13 2021 20:05:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Dear Maintainer, Please Keep a Changelog
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 13 2021 20:05:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 13 2021 20:05:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 13 2021 20:05:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-11-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/11/13/how-the-changelog-updater-action-works/" aria-label="How the &quot;changelog-updater&quot; Action works published on Sat Nov 13 2021 20:03:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How the &quot;changelog-updater&quot; Action works
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 13 2021 20:03:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 13 2021 20:03:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 13 2021 20:03:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-11-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/11/13/introducing-the-changelog-updater-action/" aria-label="Introducing the changelog-updater Action published on Sat Nov 13 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing the changelog-updater Action
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 13 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 13 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 13 2021 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-11-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/09/26/using-laravel-dusk-outside-of-tests-to-upload-files/" aria-label="Using Laravel Dusk outside of Tests to upload Files published on Sun Sep 26 2021 13:50:08 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Using Laravel Dusk outside of Tests to upload Files
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Sep 26 2021 13:50:08 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Sep 26 2021 13:50:08 GMT+0000 (Coordinated Universal Time)" datetime="Sun Sep 26 2021 13:50:08 GMT+0000 (Coordinated Universal Time)">
+                                    2021-09-26
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/09/13/boring-reading-stack/" aria-label="Boring Reading Stack published on Mon Sep 13 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Boring Reading Stack
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Sep 13 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Sep 13 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Sep 13 2021 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-09-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/05/24/deployer-on-github-actions/" aria-label="Deployer on GitHub Actions published on Mon May 24 2021 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Deployer on GitHub Actions
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon May 24 2021 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon May 24 2021 18:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon May 24 2021 18:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-05-24
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/04/28/auto-merge-dependabot-pull-requests/" aria-label="Auto Merge Dependabot Pull Requests with GitHub Actions published on Wed Apr 28 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Auto Merge Dependabot Pull Requests with GitHub Actions
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Apr 28 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Apr 28 2021 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Apr 28 2021 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-04-28
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/04/16/register-additional-laravel-components-in-jigsaw/" aria-label="Register additional Laravel Components in Jigsaw published on Fri Apr 16 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Register additional Laravel Components in Jigsaw
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Fri Apr 16 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Fri Apr 16 2021 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Fri Apr 16 2021 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-04-16
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/03/21/tailwind-css-dropdown-with-details-menu-web-component/" aria-label="Tailwind CSS Dropdown with details-menu Web Component published on Sun Mar 21 2021 09:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Tailwind CSS Dropdown with details-menu Web Component
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 21 2021 09:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 21 2021 09:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 21 2021 09:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-03-21
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/02/03/my-alfred-setup/" aria-label="My Alfred Setup published on Wed Feb 03 2021 19:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            My Alfred Setup
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Feb 03 2021 19:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Feb 03 2021 19:30:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Feb 03 2021 19:30:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-02-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2021/01/10/moving-to-firefox/" aria-label="Moving to Firefox published on Sun Jan 10 2021 10:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Moving to Firefox
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Jan 10 2021 10:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Jan 10 2021 10:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Jan 10 2021 10:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2021-01-10
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2020</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/12/22/getting-started-with-bash-testing-with-bats/" aria-label="Getting Started with Bash Testing with Bats published on Tue Dec 22 2020 15:44:13 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Getting Started with Bash Testing with Bats
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 22 2020 15:44:13 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 22 2020 15:44:13 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 22 2020 15:44:13 GMT+0000 (Coordinated Universal Time)">
+                                    2020-12-22
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/12/22/writing-integration-tests-for-git-auto-commit/" aria-label="Writing Integration Tests for git-auto-commit published on Tue Dec 22 2020 15:43:31 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Writing Integration Tests for git-auto-commit
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 22 2020 15:43:31 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 22 2020 15:43:31 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 22 2020 15:43:31 GMT+0000 (Coordinated Universal Time)">
+                                    2020-12-22
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/12/14/use-dropshare-with-an-aws-s3-bucket-and-a-custom-domain-with-ssl-certificate/" aria-label="Use Dropshare with an AWS S3 Bucket and a custom Domain with SSL Certificate published on Mon Dec 14 2020 20:18:29 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Use Dropshare with an AWS S3 Bucket and a custom Domain with SSL Certificate
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Dec 14 2020 20:18:29 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Dec 14 2020 20:18:29 GMT+0000 (Coordinated Universal Time)" datetime="Mon Dec 14 2020 20:18:29 GMT+0000 (Coordinated Universal Time)">
+                                    2020-12-14
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/11/14/podcasts-2020/" aria-label="Podcasts 2020 published on Sat Nov 14 2020 18:55:59 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Podcasts 2020
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 14 2020 18:55:59 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 14 2020 18:55:59 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 14 2020 18:55:59 GMT+0000 (Coordinated Universal Time)">
+                                    2020-11-14
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/09/17/nested-states-in-laravel-8-database-factories/" aria-label="Nested States in Laravel 8 Database Factories published on Thu Sep 17 2020 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Nested States in Laravel 8 Database Factories
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Sep 17 2020 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Sep 17 2020 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Sep 17 2020 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-09-17
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/09/03/laravel-stats-v23-behind-the-scenes/" aria-label="Laravel Stats v2.3 - Behind the Scenes published on Thu Sep 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laravel Stats v2.3 - Behind the Scenes
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Sep 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Sep 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Sep 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-09-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/08/04/synology-nas-setup-2020/" aria-label="Synology NAS Setup (2020) published on Tue Aug 04 2020 13:14:02 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Synology NAS Setup (2020)
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Aug 04 2020 13:14:02 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Aug 04 2020 13:14:02 GMT+0000 (Coordinated Universal Time)" datetime="Tue Aug 04 2020 13:14:02 GMT+0000 (Coordinated Universal Time)">
+                                    2020-08-04
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/07/20/add-dark-mode-support-to-at-tailwindcsstypography/" aria-label="Add Dark Mode support to @tailwindcss/typography published on Mon Jul 20 2020 20:04:15 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Add Dark Mode support to &#64;tailwindcss/typography
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Jul 20 2020 20:04:15 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Jul 20 2020 20:04:15 GMT+0000 (Coordinated Universal Time)" datetime="Mon Jul 20 2020 20:04:15 GMT+0000 (Coordinated Universal Time)">
+                                    2020-07-20
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/06/08/host-fathom-lite-on-a-laravel-forge-server/" aria-label="Host Fathom Lite on a Laravel Forge Server published on Mon Jun 08 2020 21:09:16 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Host Fathom Lite on a Laravel Forge Server
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Jun 08 2020 21:09:16 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Jun 08 2020 21:09:16 GMT+0000 (Coordinated Universal Time)" datetime="Mon Jun 08 2020 21:09:16 GMT+0000 (Coordinated Universal Time)">
+                                    2020-06-08
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/04/18/building-a-self-hosted-photo-stream-and-add-images-with-ios-shortcuts/" aria-label="Building a self hosted photo stream and add images with iOS Shortcuts published on Sat Apr 18 2020 21:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Building a self hosted photo stream and add images with iOS Shortcuts
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Apr 18 2020 21:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Apr 18 2020 21:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Apr 18 2020 21:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-04-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/04/16/asana-expander-a-browser-extension-to-fix-asanas-ux-problems/" aria-label="Asana Expander: A browser extension to fix Asana&#39;s UX problems published on Thu Apr 16 2020 21:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Asana Expander: A browser extension to fix Asana&#39;s UX problems
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Apr 16 2020 21:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Apr 16 2020 21:30:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Apr 16 2020 21:30:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-04-16
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/03/29/the-case-to-use-pcov-to-generate-test-coverage-results/" aria-label="The case to use PCOV to generate test coverage results published on Sun Mar 29 2020 13:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            The case to use PCOV to generate test coverage results
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 29 2020 13:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 29 2020 13:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 29 2020 13:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-03-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/02/29/lazy-collections-in-laravel-excel/" aria-label="Lazy Collections in Laravel Excel published on Sat Feb 29 2020 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Lazy Collections in Laravel Excel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Feb 29 2020 18:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Feb 29 2020 18:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Feb 29 2020 18:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-02-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2020/02/03/use-basic-authentication-to-protect-the-laravel-horizon-dashboard/" aria-label="Use Basic Authentication to protect the Laravel Horizon Dashboard published on Mon Feb 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Use Basic Authentication to protect the Laravel Horizon Dashboard
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Feb 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Feb 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Feb 03 2020 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2020-02-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2019</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/12/26/things-3-setup/" aria-label="Things 3 Setup published on Thu Dec 26 2019 18:41:15 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Things 3 Setup
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Dec 26 2019 18:41:15 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Dec 26 2019 18:41:15 GMT+0000 (Coordinated Universal Time)" datetime="Thu Dec 26 2019 18:41:15 GMT+0000 (Coordinated Universal Time)">
+                                    2019-12-26
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/11/12/constrained-eager-loading-in-laravel/" aria-label="Constrained Eager Loading in Laravel published on Tue Nov 12 2019 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Constrained Eager Loading in Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Nov 12 2019 20:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Nov 12 2019 20:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Nov 12 2019 20:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-11-12
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/11/09/podcasts-2019/" aria-label="Podcasts 2019 published on Sat Nov 09 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Podcasts 2019
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 09 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 09 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 09 2019 15:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-11-09
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/09/27/run-laravel-test-suite-on-github-actions-with-laravel-docker/" aria-label="Run Laravel test suite on GitHub Actions with laravel-docker published on Fri Sep 27 2019 22:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Run Laravel test suite on GitHub Actions with laravel-docker
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Fri Sep 27 2019 22:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Fri Sep 27 2019 22:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Fri Sep 27 2019 22:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-09-27
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/09/22/run-prettier-or-php-cs-fixer-with-github-actions/" aria-label="Run prettier or php-cs-fixer with GitHub Actions published on Sun Sep 22 2019 16:15:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Run prettier or php-cs-fixer with GitHub Actions
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Sep 22 2019 16:15:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Sep 22 2019 16:15:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Sep 22 2019 16:15:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-09-22
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/08/03/use-laravel-as-a-static-site-generator-and-host-it-serverless/" aria-label="Use Laravel as a Static Site Generator and host it serverless published on Sat Aug 03 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Use Laravel as a Static Site Generator and host it serverless
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Aug 03 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Aug 03 2019 15:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Aug 03 2019 15:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-08-03
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/06/13/github-actions-for-php-developers-hcl/" aria-label="GitHub Actions for PHP Developers (HCL) published on Thu Jun 13 2019 19:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            GitHub Actions for PHP Developers (HCL)
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Jun 13 2019 19:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Jun 13 2019 19:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Jun 13 2019 19:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-06-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/05/20/a-simple-skip-to-content-button/" aria-label="A simple &quot;Skip to Content&quot; Button published on Mon May 20 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            A simple &quot;Skip to Content&quot; Button
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon May 20 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon May 20 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon May 20 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-05-20
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/03/10/server-side-syntax-highlighting-with-jigsaw/" aria-label="Server Side Syntax Highlighting with Jigsaw published on Sun Mar 10 2019 10:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Server Side Syntax Highlighting with Jigsaw
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 10 2019 10:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 10 2019 10:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 10 2019 10:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-03-10
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/03/10/notes-on-rewriting-my-site-with-jigsaw/" aria-label="Notes on rewriting my Site with Jigsaw published on Sun Mar 10 2019 09:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Notes on rewriting my Site with Jigsaw
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 10 2019 09:30:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 10 2019 09:30:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 10 2019 09:30:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-03-10
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2019/01/22/include-and-version-nginx-configs-in-laravel-forge/" aria-label="Include and Version NGINX Configs in Laravel Forge published on Tue Jan 22 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Include and Version NGINX Configs in Laravel Forge
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jan 22 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jan 22 2019 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jan 22 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2019-01-22
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2018</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/12/28/create-mocks-for-api-clients-in-laravel/" aria-label="Create Mocks for API Clients in Laravel published on Fri Dec 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Create Mocks for API Clients in Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Fri Dec 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Fri Dec 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Fri Dec 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-12-28
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/12/23/state-of-the-apps-2019/" aria-label="State of the Apps 2019 published on Sun Dec 23 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            State of the Apps 2019
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Dec 23 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Dec 23 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Dec 23 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-12-23
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/12/17/convert-a-collection-to-a-downloadable-csv/" aria-label="Convert a Collection to a downloadable CSV published on Mon Dec 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Convert a Collection to a downloadable CSV
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Dec 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Dec 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Dec 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-12-17
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/11/28/dont-be-afraid-of-using-laravels-jobs-and-queues-to-scale-your-app/" aria-label="Don&#39;t be afraid of using Laravel&#39;s Jobs and Queues to scale your app published on Wed Nov 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Don&#39;t be afraid of using Laravel&#39;s Jobs and Queues to scale your app
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Nov 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Nov 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Nov 28 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-11-28
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/10/30/support-mojave-dark-mode-with-tailwind-css/" aria-label="Support Mojave Dark Mode with Tailwind CSS published on Tue Oct 30 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Support Mojave Dark Mode with Tailwind CSS
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Oct 30 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Oct 30 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Oct 30 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-10-30
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/10/18/how-to-encrypt-file-uploads-with-laravel/" aria-label="How to Encrypt File Uploads with Laravel published on Thu Oct 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How to Encrypt File Uploads with Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Oct 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Oct 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Oct 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-10-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/10/14/podcasts-2018/" aria-label="Podcasts 2018 published on Sun Oct 14 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Podcasts 2018
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Oct 14 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Oct 14 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Oct 14 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-10-14
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/07/17/zero-downtime-deployments-for-laravel-apps-with-deployer/" aria-label="Zero-Downtime Deployments for Laravel Apps with deployer published on Tue Jul 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Zero-Downtime Deployments for Laravel Apps with deployer
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jul 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jul 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jul 17 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-07-17
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/05/24/track-the-usage-of-your-laravel-apis-with-the-measurement-protocol/" aria-label="Track the Usage of your Laravel APIs with the Measurement Protocol published on Thu May 24 2018 00:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Track the Usage of your Laravel APIs with the Measurement Protocol
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu May 24 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu May 24 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu May 24 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-05-24
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/05/13/side-project-stories-1-journal-app/" aria-label="Side Project Stories #1 - Journal App published on Sun May 13 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Side Project Stories #1 - Journal App
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun May 13 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun May 13 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun May 13 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-05-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2018/02/18/how-to-use-tailwind-css-in-vue-together-with-css-modules/" aria-label="How to use Tailwind CSS in Vue together with CSS Modules published on Sun Feb 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How to use Tailwind CSS in Vue together with CSS Modules
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Feb 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Feb 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Feb 18 2018 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2018-02-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2017</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2017/11/20/version-images-with-laravel-mix/" aria-label="Version Images with Laravel Mix published on Mon Nov 20 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Version Images with Laravel Mix
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Nov 20 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Nov 20 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Nov 20 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2017-11-20
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2017/11/18/laravel-stats-how-it-was-made-and-whats-on-the-horizon/" aria-label="Laravel Stats: How it was made and what&#39;s on the horizon published on Sat Nov 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laravel Stats: How it was made and what&#39;s on the horizon
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 18 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2017-11-18
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2017/10/26/digitalize-and-crop-photos-with-imagemagick-and-php/" aria-label="Digitalize and crop Photos with ImageMagick and PHP published on Thu Oct 26 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Digitalize and crop Photos with ImageMagick and PHP
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Oct 26 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Oct 26 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Oct 26 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2017-10-26
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2017/07/29/disableupdatedat-trait-for-laravel/" aria-label="DisableUpdatedAt Trait for Laravel published on Sat Jul 29 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            DisableUpdatedAt Trait for Laravel
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Jul 29 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Jul 29 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Jul 29 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2017-07-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2017/07/23/code-experiment-end-to-end-encrypted-diary-app/" aria-label="Code Experiment: End-to-End encrypted Diary App published on Sun Jul 23 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Code Experiment: End-to-End encrypted Diary App
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Jul 23 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Jul 23 2017 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Jul 23 2017 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2017-07-23
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2016</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/12/29/how-i-write-integration-tests-for-laravel-socialite-powered-apps/" aria-label="How I write Integration Tests for Laravel Socialite powered Apps published on Thu Dec 29 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How I write Integration Tests for Laravel Socialite powered Apps
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Thu Dec 29 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Thu Dec 29 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Thu Dec 29 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-12-29
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/10/01/install-metabase-on-a-laravel-forge-provisioned-digitalocean-droplet/" aria-label="Install Metabase on a Laravel Forge provisioned DigitalOcean Droplet published on Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)"
+                                class="text-gray-800 font-normal no-underline hover:underline">
+                            Install Metabase on a Laravel Forge provisioned DigitalOcean Droplet
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Oct 01 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-10-01
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/08/16/sign-your-commits-with-tower-app/" aria-label="Sign your commits with Tower app published on Tue Aug 16 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Sign your commits with Tower app
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Aug 16 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Aug 16 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Aug 16 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-08-16
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/07/26/introducing-php-swiss-cantons/" aria-label="Introducing php-swiss-cantons published on Tue Jul 26 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing php-swiss-cantons
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Jul 26 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Jul 26 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Jul 26 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-07-26
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/07/13/laravel-forge-php7-and-bzip2/" aria-label="Laravel Forge: PHP7 and bzip2 published on Wed Jul 13 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laravel Forge: PHP7 and bzip2
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Wed Jul 13 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Wed Jul 13 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Wed Jul 13 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-07-13
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/01/17/advanced-eloquent-working-with-pivot-tables/" aria-label="Advanced Eloquent: Working with Pivot Tables published on Sun Jan 17 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Advanced Eloquent: Working with Pivot Tables
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Jan 17 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Jan 17 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Jan 17 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-01-17
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2016/01/10/laravel-queues-on-uberspace/" aria-label="Laravel Queues on Uberspace published on Sun Jan 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laravel Queues on Uberspace
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Jan 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Jan 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Jan 10 2016 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2016-01-10
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2015</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2015/11/28/introducing-dirby/" aria-label="Introducing: Dirby published on Sat Nov 28 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Introducing: Dirby
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sat Nov 28 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sat Nov 28 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sat Nov 28 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2015-11-28
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2015/05/25/automate-todayone/" aria-label="Automate toDayOne published on Mon May 25 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Automate toDayOne
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon May 25 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon May 25 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon May 25 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2015-05-25
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2015/05/04/envoyerio-auf-einem-uberspace-nutzen/" aria-label="Envoyer.io auf einem Uberspace nutzen published on Mon May 04 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Envoyer.io auf einem Uberspace nutzen
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon May 04 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon May 04 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon May 04 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2015-05-04
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2015/03/01/developer-setup-early-2015/" aria-label="Developer Setup - early 2015 published on Sun Mar 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Developer Setup - early 2015
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Mar 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Mar 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Mar 01 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2015-03-01
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2015/02/27/bower-and-laravel-elixir/" aria-label="Bower and Laravel Elixir published on Fri Feb 27 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Bower and Laravel Elixir
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Fri Feb 27 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Fri Feb 27 2015 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Fri Feb 27 2015 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2015-02-27
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+                <h2 class="mb-3 text-base font-black">2014</h2>
+
+                <div class="mb-12">
+
+
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2014/12/30/swiss-canton-iconfont/" aria-label="Swiss Canton Iconfont published on Tue Dec 30 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Swiss Canton Iconfont
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 30 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 30 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 30 2014 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2014-12-30
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2014/12/02/jawbone-up-to-dayone/" aria-label="Jawbone UP to DayOne published on Tue Dec 02 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Jawbone UP to DayOne
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Tue Dec 02 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Tue Dec 02 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Tue Dec 02 2014 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2014-12-02
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2014/10/12/how-to-install-shout-on-uberspace/" aria-label="How to install Shout on Uberspace published on Sun Oct 12 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            How to install Shout on Uberspace
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Sun Oct 12 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Sun Oct 12 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Sun Oct 12 2014 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2014-10-12
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+                    <article class="md:flex justify-between mb-1">
+                        <h4>
+                            <a href="/posts/2014/03/24/laravel-vagrant-sequelpro/" aria-label="Laravel + Vagrant + SequelPro published on Mon Mar 24 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-800 font-normal no-underline hover:underline">
+                            Laravel + Vagrant + SequelPro
+                        </a>
+                        </h4>
+
+                        <div class="mt-1 mb-6 sm:m-0 shrink-0">
+                            <dl>
+                                <dt class="sr-only">Published at</dt>
+                                <dd>
+                                    <time aria-label="Published on Mon Mar 24 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" class="text-gray-600 text-sm font-medium tabular-nums" title="Mon Mar 24 2014 00:00:00 GMT+0000 (Coordinated Universal Time)" datetime="Mon Mar 24 2014 00:00:00 GMT+0000 (Coordinated Universal Time)">
+                                    2014-03-24
+                                </time>
+                                </dd>
+                            </dl>
+                        </div>
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+
+        </main>
+
+        <footer class="text-sm text-center mt-20 mb-8 px-4 md:px-0">
+            <nav class="mx-auto flex flex-col justify-center items-center gap-2">
+                <div class="inline-flex flex-wrap space-x-4 text-slate-600">
+                    <a href="https://phpc.social/@stefanzweifel" rel="me" class="underline hover:no-underline">Mastodon</a>
+                    <a href="https://bsky.app/profile/stefanzweifel.dev" rel="me" class="underline hover:no-underline">Bluesky</a>
+                    <a href="https://github.com/stefanzweifel" rel="me" class="underline hover:no-underline">GitHub</a>
+                    <a href="/cdn-cgi/l/email-protection#7a090e1f1c1b143a090e1f1c1b14000d1f131c1f16541e1f0c" class="underline hover:no-underline">Email</a>
+                </div>
+                <div class="inline-flex flex-wrap space-x-4 text-slate-600">
+                    <a href="/rss.xml" class="underline hover:no-underline">RSS</a>
+                    <a href="/micro/" class="underline hover:no-underline">Micro</a>
+                    <a href="/now/" class="underline hover:no-underline">Now</a>
+                    <a href="/blogroll/" class="underline hover:no-underline">Blogroll</a>
+                    <a href="/colophon/" class="underline hover:no-underline">Colophon</a>
+                    <a href="/changelog/" class="underline hover:no-underline">Changelog</a>
+                    <a href="/subscribe" class="underline hover:no-underline">Subscribe</a>
+                </div>
+            </nav>
+            <div class="mt-3 text-xs text-slate-500">
+                &copy; 2012 - 2026 Stefan Zweifel
+            </div>
+        </footer>
+
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"1e943190d18244159a7ac261df570747","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
