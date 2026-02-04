@@ -1,0 +1,49 @@
+{
+  "links": [
+    { "name": "Website", "url": "https://stefanzweifel.dev/" },
+    { "name": "GitHub", "url": "https://github.com/stefanzweifel" },
+    { "name": "Mastodon", "url": "https://phpc.social/@stefanzweifel" },
+    { "name": "Bluesky", "url": "https://bsky.app/profile/stefanzweifel.dev" },
+    { "name": "Buy Me a Coffee", "url": "https://buymeacoff.ee/3oQ64YW" },
+    { "name": "GitHub Sponsors", "url": "https://github.com/sponsors/stefanzweifel" },
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/stefanzweifel/" }
+  ],
+  "talks": [
+    {
+      "title": "Rapid Shipping with Filament + Manager & Strategy Pattern",
+      "recordingUrl": "https://youtu.be/4hNaWxsKgvs",
+      "slidesUrl": "https://github.com/stefanzweifel/talks/tree/main/2025-03-rapid-shipping-with-filament-and-manager-strategy-pattern",
+      "description": "I shared how I've used Filament PHP to build my own read-it-later-app and how I've used the Manager and Strategy pattern at the Laravel Switzerland Meetup (March 2025)"
+    },
+    {
+      "title": "Intro to GitHub Actions",
+      "recordingUrl": "https://www.youtube.com/watch?v=UrCfZMuHpTc",
+      "slidesUrl": "https://github.com/stefanzweifel/talks/tree/main/2023-06-github-actions-automate-yourself-away",
+      "description": "I gave an intro talk about GitHub Actions at the Laravel Switzerland Meetup (June 2023)"
+    },
+    {
+      "title": "Intro to Laravel Livewire",
+      "recordingUrl": "https://www.youtube.com/watch?v=elNeh95cyZM",
+      "slidesUrl": "https://github.com/stefanzweifel/talk-intro-to-livewire",
+      "description": "I gave an intro talk about Laravel Livewire at the Laravel Switzerland Meetup. (October 2022)"
+    }
+  ],
+  "interviews": [
+    { "title": "entwickler.de: Talking about Laravel Stats 2.0", "url": "https://entwickler.de/php/laravel-stats-20-ist-da-statistiken-uber-code-von-laravel-projekten-erstellen/" },
+    { "title": "github.blog: Interview about git-auto-commit GitHub Action", "url": "https://github.blog/2020-09-17-github-action-hero-stefan-zweifel-and-git-auto-commit/" },
+    { "title": "cloudways.com: Interview about my journey as a Laravel developer", "url": "https://www.cloudways.com/blog/stefan-zweifel-interview/" }
+  ],
+  "people": [
+    { "name": "Ben Rüegg", "url": "https://benruegg.com/", "met": false },
+    { "name": "Cabel Sasser", "url": "https://cabel.com/", "met": false },
+    { "name": "Claire Saffitz", "url": "https://en.wikipedia.org/wiki/Claire_Saffitz", "met": false },
+    { "name": "Craig Mod", "url": "https://craigmod.com", "met": false },
+    { "name": "Dan Harrin", "url": "https://danharrin.com/", "met": false },
+    { "name": "Aaron Francis", "url": "https://aaronfrancis.com/", "met": true },
+    { "name": "Bramus Van Damme", "url": "https://www.bram.us/", "met": true },
+    { "name": "Dennis Koch", "url": "https://denniskoch.dev", "met": true },
+    { "name": "Dries Vints", "url": "https://driesvints.com/", "met": true },
+    { "name": "Freek Van der Herten", "url": "https://freek.dev", "met": true },
+    { "name": "Taylor Otwell", "url": "https://github.com/taylorotwell", "met": true }
+  ]
+}

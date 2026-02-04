@@ -1,0 +1,54 @@
+[
+  {
+    "category": "Hardware",
+    "items": [
+      { "name": "Apple MacBook Pro (14-inch, M1 Pro, 2021)" },
+      { "name": "Apple iPhone 17 Pro" },
+      { "name": "Apple iPad Pro (Late 2018)" },
+      { "name": "Apple Watch Series 9" },
+      { "name": "Keychron K2 wireless keyboard", "url": "https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard" },
+      { "name": "Synology NAS DS713+ (2TB)", "description": "Acts as a Time Machine backup, Plex Media Server and document storage" },
+      { "name": "Raspberry Pi running Pi-hole", "url": "https://pi-hole.net" },
+      { "name": "PlayStation 4" }
+    ]
+  },
+  {
+    "category": "Audio",
+    "items": [
+      { "name": "Audio-Technica ATH-M50x" },
+      { "name": "Apple AirPods Pro (2nd Generation)" }
+    ]
+  },
+  {
+    "category": "Global Services",
+    "items": [
+      { "name": "1Password", "url": "https://1password.com", "description": "Password manager of choice" },
+      { "name": "iCloud Drive", "description": "Primary place to store all files and documents" },
+      { "name": "Google One", "url": "https://one.google.com", "description": "Storage for NAS backups" },
+      { "name": "Spotify", "description": "Music streaming for focus and leisure" }
+    ]
+  },
+  {
+    "category": "macOS Apps",
+    "items": [
+      { "name": "Alfred", "url": "https://www.alfredapp.com/", "description": "File search, clipboard history, text expansion and more" },
+      { "name": "PhpStorm", "url": "https://www.jetbrains.com/phpstorm/", "description": "Primary IDE for PHP development" },
+      { "name": "Sublime Text 3", "url": "https://www.sublimetext.com/", "description": "Code editor for quick edits" },
+      { "name": "Ghostty", "url": "https://ghostty.org" },
+      { "name": "Safari", "description": "Everyday browsing" },
+      { "name": "Firefox", "description": "Web development" },
+      { "name": "iA Writer", "url": "https://ia.net/writer", "description": "Long form writing" },
+      { "name": "Obsidian", "url": "https://obsidian.md/", "description": "Note-taking" },
+      { "name": "TablePlus", "url": "https://tableplus.io", "description": "Database management" },
+      { "name": "GitHub Desktop", "url": "https://desktop.github.com/", "description": "Git GUI" }
+    ]
+  },
+  {
+    "category": "Global Apps",
+    "items": [
+      { "name": "Things 3", "description": "To-do app for personal and work projects" },
+      { "name": "Reeder", "url": "https://reederapp.com/", "description": "RSS reader" },
+      { "name": "Apple Photos" }
+    ]
+  }
+]

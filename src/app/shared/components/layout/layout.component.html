@@ -1,0 +1,24 @@
+<!-- Pride gradient bar -->
+<div class="flex h-[2px] w-full">
+  <div class="w-full flex-none blur-sm bg-gradient-pride"></div>
+  <div class="-ml-[100%] w-full flex-none blur-[1px] bg-gradient-pride"></div>
+  <div class="-ml-[100%] w-full flex-none blur-sm bg-gradient-pride"></div>
+  <div class="-ml-[100%] w-full flex-none blur-[1px] bg-gradient-pride"></div>
+</div>
+
+<!-- Skip to content link -->
+<a class="absolute top-auto left-[-999px] overflow-hidden w-px h-px font-semibold bg-gray-900 text-gray-200 px-2 py-1 rounded shadow shadow-gray-500/20 ring-2 ring-red-500 ring-offset-2 ring-offset-red-100 focus:overflow-auto focus:w-auto focus:h-auto focus:top-5 focus:left-5 focus:z-50"
+   href="#skip-content-target">
+  Skip to content &darr;
+</a>
+
+<div class="container mx-auto max-w-2xl">
+  <app-header></app-header>
+
+  <div id="skip-content-target" class="hidden" tabindex="-1"></div>
+  <main class="px-4 md:px-0">
+    <ng-content></ng-content>
+  </main>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,27 @@
+[
+  {
+    "year": 2025,
+    "books": [
+      { "title": "We Solve Murders", "author": "Richard Osman" },
+      { "title": "Be Useful - Seven Tools for Life", "author": "Arnold Schwarzenegger" },
+      { "title": "Drei Tage, Zwei Frauen, Ein Affe und der Sinn des Lebens", "author": "Karolien Notebaert" },
+      { "title": "Warum Kindern Ihren Eltern nichts schulden", "author": "Barbara Bleisch" }
+    ]
+  },
+  {
+    "year": 2024,
+    "books": [
+      { "title": "The Shape of Design", "author": "Frank Chimero" },
+      { "title": "Death's End", "author": "Liu Cixin" },
+      { "title": "Things Become Other Things", "author": "Craig Mod" },
+      { "title": "The Restaurant at the End of the Universe", "author": "Douglas Adams" }
+    ]
+  },
+  {
+    "year": 2023,
+    "books": [
+      { "title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams" },
+      { "title": "Project Hail Mary", "author": "Andy Weir" }
+    ]
+  }
+]
