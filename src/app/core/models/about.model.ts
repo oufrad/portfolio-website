@@ -22,6 +22,7 @@ export interface Person {
 }
 
 export interface AboutData {
+  bio: string[];
   links: SocialLink[];
   talks: Talk[];
   interviews: Interview[];

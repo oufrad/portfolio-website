@@ -1,15 +1,10 @@
 <article class="prose">
   <h1>About</h1>
 
-  <p>Hi, I'm Stefan.</p>
-  <p>I currently work as a senior full stack developer at <a href="https://trenda.ch">Trenda</a>, where I help advance their product using my expertise in Laravel, Livewire, Tailwind CSS, and Vue.js. My work involves building and maintaining web applications, integrating with various APIs, and collaborating with cross-functional teams to deliver solutions.</p>
-  <p>Previously, I worked at 2media/CLARK, where I spent my time developing internal tools for marketing and sales teams, maintaining e-commerce platforms, creating JavaScript widgets for clients, and designing campaign landing pages.</p>
-  <p>Previously I finished my apprenticeship as a general computer scientist, where I worked and ran with other apprenticeship members a little development studio, where we had to find clients, pitch websites, write offers, build the website, and handle all the communication around that.</p>
-  <p>I first began experimenting with code while playing World of Warcraft. The game can be extended with addons written in LUA, and I spent many afternoons and evenings reading the code of others and adjusting the code to my liking.<br> The Warcraft era is over, but I still love to tinker with new languages and frameworks and <a href="/projects">build software</a> which help me in my everyday life.</p>
-  <p>When I'm not at the computer I enjoy a ride with my mountain bike, a hike through the Swiss alps, or <a href="/reading">a good book</a>.</p>
-  <p>I'm also an avid gym-goer, <a href="/posts/2020/11/14/podcasts-2020/">podcast listener</a> and occasional PS4 gamer.</p>
-
   @if (aboutData(); as data) {
+    @for (p of data.bio; track p) {
+      <p [innerHTML]="p"></p>
+    }
     <h2 id="links">Links</h2>
     <ul>
       @for (link of data.links; track link.name) {

@@ -1,12 +1,13 @@
 {
+  "bio": [
+    "Hi, I'm Mohamed.",
+    "I currently work as a Software Engineer and Data Engineer at <a href=\"https://www.hahn-software.de\">Hahn Software</a>, where I work on building software systems and data solutions.",
+    "I'm based in Rabat, Morocco."
+  ],
   "links": [
-    { "name": "Website", "url": "https://stefanzweifel.dev/" },
-    { "name": "GitHub", "url": "https://github.com/stefanzweifel" },
-    { "name": "Mastodon", "url": "https://phpc.social/@stefanzweifel" },
-    { "name": "Bluesky", "url": "https://bsky.app/profile/stefanzweifel.dev" },
-    { "name": "Buy Me a Coffee", "url": "https://buymeacoff.ee/3oQ64YW" },
-    { "name": "GitHub Sponsors", "url": "https://github.com/sponsors/stefanzweifel" },
-    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/stefanzweifel/" }
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mohamed-oufrad/" },
+    { "name": "GitHub", "url": "https://github.com/oufrad" },
+    { "name": "Email", "url": "mailto:oufrad00@email.com" }
   ],
   "talks": [
     {

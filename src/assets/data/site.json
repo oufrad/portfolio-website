@@ -1,0 +1,24 @@
+{
+  "siteName": "Mohamed Oufrad",
+  "navLinks": [
+    { "path": "/about", "label": "About" },
+    { "path": "/articles", "label": "Articles" },
+    { "path": "/projects", "label": "Projects" },
+    { "path": "/uses", "label": "Uses" },
+    { "path": "/reading", "label": "Reading" }
+  ],
+  "footerSocialLinks": [
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mohamed-oufrad/", "rel": "me" },
+    { "name": "GitHub", "url": "https://github.com/mohamed-oufrad", "rel": "me" },
+    { "name": "Email", "url": "mailto:mohamed.oufrad@email.com" }
+  ],
+  "footerSecondaryLinks": [
+    { "name": "RSS", "url": "/rss.xml" },
+    { "name": "Micro", "url": "/micro/" },
+    { "name": "Now", "url": "/now/" },
+    { "name": "Blogroll", "url": "/blogroll/" },
+    { "name": "Colophon", "url": "/colophon/" },
+    { "name": "Changelog", "url": "/changelog/" },
+    { "name": "Subscribe", "url": "/subscribe" }
+  ]
+}

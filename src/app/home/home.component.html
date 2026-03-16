@@ -1,41 +1,43 @@
-<div class="mt-8 mb-8">
-  <div class="mb-4 h-10 w-10 rounded-lg overflow-hidden animate-in zoom-in-0 zoom-out-100 spin-in-45 duration-500">
-    <div class="h-10 w-10 bg-gradient-pride-full animate-gradient-river bg-[length:500%_500%] hover:duration-1000"></div>
+@if (homeData(); as data) {
+  <div class="mt-8 mb-8">
+    <div class="mb-4 h-10 w-10 rounded-lg overflow-hidden animate-in zoom-in-0 zoom-out-100 spin-in-45 duration-500">
+      <div class="h-10 w-10 bg-gradient-pride-full animate-gradient-river bg-[length:500%_500%] hover:duration-1000"></div>
+    </div>
+
+    <h1 class="text-slate-900 font-medium">{{ data.name }}</h1>
+    <h2 class="text-slate-600 font-medium">{{ data.title }}</h2>
   </div>
 
-  <h1 class="text-slate-900 font-medium">Stefan Zweifel</h1>
-  <h2 class="text-slate-600 font-medium">Fullstack Developer</h2>
-</div>
-
-<div class="prose prose-a:text-slate-900 visited:prose-a:text-slate-900">
-  <p>I'm working at <a href="https://trenda.ch">Trenda</a> as a senior fullstack developer, bringing over 15 years of experience building applications with PHP, Laravel, Livewire, Tailwind CSS and Vue.js to help drive their product forward.</p>
-  <p>I regularly contribute to the open source community by writing guides on how to automate tasks or by releasing PHP packages to solve a particular problem.</p>
-  <p>On this personal website I write about how <a href="/posts/2021/04/28/auto-merge-dependabot-pull-requests">I solve problems</a> in my personal or professional projects, how I set up <a href="/posts/2022/12/18/my-updated-things-3-setup/">my favourite</a> <a href="/posts/2021/02/03/my-alfred-setup">apps</a> or on how to apply minimalism to the digital world.</p>
-</div>
-
-<div class="my-16">
-  <h3 class="mb-2 text-slate-900 font-medium">On the web</h3>
-  <ul class="flex space-x-4">
-    @for (link of socialLinks; track link.name) {
-      <li>
-        <a [href]="link.url" class="underline">{{ link.name }}</a>
-      </li>
+  <div class="prose prose-a:text-slate-900 visited:prose-a:text-slate-900">
+    @for (p of data.bio; track p) {
+      <p [innerHTML]="p"></p>
     }
-  </ul>
-</div>
+  </div>
 
-<div class="my-24">
-  <h3 class="mb-4 text-slate-900 font-medium">Selected Writing</h3>
-  <ul class="text-slate-800 space-y-2">
-    @for (article of selectedWriting; track article.url) {
-      <li class="flex">
-        <span class="shrink-0 grow-0 inline-block w-20 text-gray-500 tabular-nums">
-          {{ article.date }}
-        </span>
-        <a [href]="article.url" class="underline hover:no-underline">
-          {{ article.title }}
-        </a>
-      </li>
-    }
-  </ul>
-</div>
+  <div class="my-16">
+    <h3 class="mb-2 text-slate-900 font-medium">On the web</h3>
+    <ul class="flex space-x-4">
+      @for (link of data.socialLinks; track link.name) {
+        <li>
+          <a [href]="link.url" class="underline">{{ link.name }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="my-24">
+    <h3 class="mb-4 text-slate-900 font-medium">Selected Writing</h3>
+    <ul class="text-slate-800 space-y-2">
+      @for (article of data.selectedWriting; track article.url) {
+        <li class="flex">
+          <span class="shrink-0 grow-0 inline-block w-20 text-gray-500 tabular-nums">
+            {{ article.date }}
+          </span>
+          <a [href]="article.url" class="underline hover:no-underline">
+            {{ article.title }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+}

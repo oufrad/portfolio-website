@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { ContentService } from '../../../core/services/content.service';
 
 @Component({
   selector: 'app-footer',
@@ -8,22 +10,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
-  protected readonly socialLinks = [
-    { name: 'Mastodon', url: 'https://phpc.social/@stefanzweifel', rel: 'me' },
-    { name: 'Bluesky', url: 'https://bsky.app/profile/stefanzweifel.dev', rel: 'me' },
-    { name: 'GitHub', url: 'https://github.com/stefanzweifel', rel: 'me' },
-    { name: 'Email', url: 'mailto:hello@stefanzweifel.dev', rel: '' }
-  ];
-
-  protected readonly secondaryLinks = [
-    { name: 'RSS', url: '/rss.xml' },
-    { name: 'Micro', url: '/micro/' },
-    { name: 'Now', url: '/now/' },
-    { name: 'Blogroll', url: '/blogroll/' },
-    { name: 'Colophon', url: '/colophon/' },
-    { name: 'Changelog', url: '/changelog/' },
-    { name: 'Subscribe', url: '/subscribe' }
-  ];
-
+  private readonly contentService = inject(ContentService);
+  protected readonly siteData = toSignal(this.contentService.getSite());
   protected readonly currentYear = new Date().getFullYear();
 }

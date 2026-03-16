@@ -1,5 +1,7 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { ContentService } from '../../../core/services/content.service';
 
 @Component({
   selector: 'app-header',
@@ -9,11 +11,6 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {
-  protected readonly navLinks = [
-    { path: '/about', label: 'About' },
-    { path: '/articles', label: 'Articles' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/uses', label: 'Uses' },
-    { path: '/reading', label: 'Reading' }
-  ];
+  private readonly contentService = inject(ContentService);
+  protected readonly siteData = toSignal(this.contentService.getSite());
 }
