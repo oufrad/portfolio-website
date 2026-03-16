@@ -13,7 +13,6 @@
     "books": [
       { "title": "Flowers for Algernon", "author": "Daniel Keyes", "date": "2024-11-23" },
       { "title": "Into the Wild", "author": "Jon Krakauer", "date": "2024-10-16" },
-      { "title": "العدمية البراغماتية", "author": "هشام نوستيك", "date": "2024-08-13" },
       { "title": "The Psychology of Money", "author": "Morgan Housel", "date": "2024-07-23" },
       { "title": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari", "date": "2024-04-09" },
       { "title": "Why We Sleep", "author": "Matthew Walker", "date": "2024-03-05" }

@@ -2,52 +2,7 @@
   {
     "year": 2025,
     "articles": [
-      { "title": "Recap 2025", "slug": "recap-2025", "date": "2025-12-31", "url": "/posts/2025/12/31/recap-2025/" },
-      { "title": "Introducing laravel-tfa-confirmation", "slug": "introducing-laravel-tfa-confirmation", "date": "2025-02-02", "url": "/posts/2025/02/02/introducing-laravle-tfa-confirmation/" }
+      { "title": "Recap 2025", "slug": "recap-2025", "date": "2025-12-31", "url": "/posts/2025/12/31/recap-2025/" }
     ]
-  },
-  {
-    "year": 2024,
-    "articles": [
-      { "title": "Recap 2024", "slug": "recap-2024", "date": "2024-12-31", "url": "/posts/2024/12/31/recap-2024/" },
-      { "title": "On Founding the Swiss Laravel Association", "slug": "on-founding-the-swiss-laravel-association", "date": "2024-11-15", "url": "/posts/2024/11/15/on-founding-the-swiss-laravel-association/" },
-      { "title": "Deployer: Build and Cache Frontend Assets once using GitHub Actions", "slug": "deployer-build-cache-frontend", "date": "2024-08-03", "url": "/posts/2024/08/03/deployer-build-and-cache-frontend-assets-once-using-github-actions/" },
-      { "title": "How I use Shiki in Eleventy", "slug": "shiki-eleventy", "date": "2024-06-03", "url": "/posts/2024/06/03/how-i-use-shiki-in-eleventy/" },
-      { "title": "Incremental Backups with Borg Backup", "slug": "borg-backup", "date": "2024-05-25", "url": "/posts/2024/05/25/incremental-backups-with-borg-backup/" },
-      { "title": "Migrating from Laravel to Eleventy", "slug": "laravel-to-eleventy", "date": "2024-05-20", "url": "/posts/2024/05/20/migrating-from-laravel-to-eleventy/" },
-      { "title": "Meal Planning in Things 3", "slug": "meal-planning-things-3", "date": "2024-03-09", "url": "/posts/2024/03/09/meal-planning-in-things-3/" },
-      { "title": "My Reusable GitHub Actions Workflows", "slug": "reusable-github-actions", "date": "2024-03-03", "url": "/posts/2024/03/03/my-reusable-github-actions-workflows/" },
-      { "title": "Laracon EU 2024", "slug": "laracon-eu-2024", "date": "2024-02-14", "url": "/posts/2024/02/14/laracon-eu-2024/" },
-      { "title": "App Defaults", "slug": "app-defaults", "date": "2024-01-02", "url": "/posts/2024/01/02/app-defaults/" }
-    ]
-  },
-  {
-    "year": 2023,
-    "articles": [
-      { "title": "Recap 2023", "slug": "recap-2023", "date": "2023-12-27", "url": "/posts/2023/12/27/recap-2023/" },
-      { "title": "Life's Wake-Up Call into Reality", "slug": "lifes-wake-up-call", "date": "2023-12-17", "url": "/posts/2023/12/17/lifes-wake-up-call-into-reality/" },
-      { "title": "Why you should use spatie/laravel-data to store settings", "slug": "spatie-laravel-data-settings", "date": "2023-10-29", "url": "/posts/2023/10/29/spatielaravel-data-is-probably-the-best-way-to-store-settings-in-your-laravel-app/" },
-      { "title": "An Opinionated Personal Folder Structure", "slug": "personal-folder-structure", "date": "2023-09-16", "url": "/posts/2023/09/16/an-opinionated-personal-folder-structure/" },
-      { "title": "Introducing laravel-backup-restore", "slug": "laravel-backup-restore", "date": "2023-06-15", "url": "/posts/2023/06/15/introducing-laravel-backup-restore/" },
-      { "title": "Local Environment Seeders in Laravel", "slug": "local-environment-seeders", "date": "2023-01-30", "url": "/posts/2023/01/30/local-environment-seeders-in-laravel/" },
-      { "title": "A new home for my website", "slug": "new-home-website", "date": "2023-01-24", "url": "/posts/2023/01/24/a-new-home-for-my-website/" }
-    ]
-  },
-  {
-    "year": 2022,
-    "articles": [
-      { "title": "Recap 2022", "slug": "recap-2022", "date": "2022-12-27", "url": "/posts/2022/12/27/recap-2022/" },
-      { "title": "My updated Things 3 Setup", "slug": "things-3-setup", "date": "2022-12-18", "url": "/posts/2022/12/18/my-updated-things-3-setup/" },
-      { "title": "Building the 'What Are You Doing With Your Life' Visualisation", "slug": "life-visualisation", "date": "2022-11-13", "url": "/posts/2022/11/13/on-building-the-what-are-you-doing-with-your-life-visualisation/" },
-      { "title": "Migrating from Jigsaw to Laravel", "slug": "jigsaw-to-laravel", "date": "2022-09-04", "url": "/posts/2022/09/04/migrating-from-jigsaw-to-laravel/" },
-      { "title": "Review: BenQ ScreenBar", "slug": "benq-screenbar-review", "date": "2022-08-08", "url": "/posts/2022/08/08/review-of-the-benq-screenbar/" },
-      { "title": "Introducing sidecar-browsershot", "slug": "sidecar-browsershot", "date": "2022-06-21", "url": "/posts/2022/06/21/introducing-sidecar-browsershot/" }
-    ]
-  },
-  {
-    "year": 2021,
-    "articles": [
-      { "title": "Running Tighten's Jigsaw on Vercel", "slug": "jigsaw-vercel", "date": "2021-12-14", "url": "/posts/2021/12/14/running-tightens-jigsaw-on-vercel/" }
-    ]
-  }
+  } 
 ]

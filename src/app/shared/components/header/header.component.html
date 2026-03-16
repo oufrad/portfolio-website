@@ -8,7 +8,7 @@
   <nav class="text-sm text-slate-600 font-medium space-x-4">
     @for (link of siteData()?.navLinks ?? []; track link.path) {
       <a [routerLink]="link.path"
-         routerLinkActive="font-bold"
+         routerLinkActive=""
          class="underline hover:no-underline">
         {{ link.label }}
       </a>

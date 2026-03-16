@@ -2,48 +2,7 @@
   {
     "category": "Featured Projects",
     "projects": [
-      {
-        "name": "laravel-tfa-confirmation",
-        "description": "Protect sensitive routes or actions with a two-factor challenge",
-        "url": "https://github.com/stefanzweifel/laravel-tfa-confirmation",
-        "featured": true
-      },
-      {
-        "name": "laravel-backup-restore",
-        "description": "A package to restore database backups made with spatie/laravel-backup.",
-        "url": "https://github.com/stefanzweifel/laravel-backup-restore",
-        "featured": true
-      },
-      {
-        "name": "git-auto-commit-action",
-        "description": "GitHub Action to automatically commit changed files back to the repository.",
-        "url": "https://github.com/stefanzweifel/git-auto-commit-action",
-        "featured": true
-      },
-      {
-        "name": "sidecar-browsershot",
-        "description": "A Sidecar function to run Laravel Browsershot / Puppeteer on AWS Lambda.",
-        "url": "https://github.com/stefanzweifel/sidecar-browsershot",
-        "featured": true
-      },
-      {
-        "name": "changelog-updater-action",
-        "description": "A GitHub Action to automatically update a 'Keep a Changelog' CHANGELOG with the latest release notes.",
-        "url": "https://github.com/stefanzweifel/changelog-updater-action",
-        "featured": true
-      },
-      {
-        "name": "commonmark-markdown-renderer",
-        "description": "PHP package to render a league/commonmark AST back to Markdown.",
-        "url": "https://github.com/stefanzweifel/commonmark-markdown-renderer",
-        "featured": true
-      },
-      {
-        "name": "laravel-sends",
-        "description": "Laravel package to keep track of outgoing emails and associate sent emails with Eloquent models.",
-        "url": "https://github.com/stefanzweifel/laravel-sends",
-        "featured": true
-      }
+     
     ]
   }
 ]
