@@ -1,20 +1,21 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [],
-  templateUrl: './home.component.html'
+  templateUrl: './home.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent {
-  socialLinks = [
+  protected readonly socialLinks = [
     { name: 'Mastodon', url: 'https://phpc.social/@stefanzweifel' },
     { name: 'Bluesky', url: 'https://bsky.app/profile/stefanzweifel.dev' },
     { name: 'GitHub', url: 'https://github.com/stefanzweifel' },
     { name: 'Email', url: 'mailto:hello@stefanzweifel.dev' }
   ];
 
-  selectedWriting = [
+  protected readonly selectedWriting = [
     { date: '08/2024', title: 'Deployer: Build and Cache Frontend Assets once using GitHub Actions', url: '/posts/2024/08/03/deployer-build-and-cache-frontend-assets-once-using-github-actions/' },
     { date: '03/2024', title: 'Meal Planning in Things 3', url: '/posts/2024/03/09/meal-planning-in-things-3/' },
     { date: '09/2023', title: 'An Opinionated Personal Folder Structure', url: '/posts/2023/09/16/an-opinionated-personal-folder-structure/' },

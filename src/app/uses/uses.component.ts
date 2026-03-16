@@ -1,20 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ContentService } from '../core/services/content.service';
-import { UsesCategory } from '../core/models/uses.model';
 
 @Component({
   selector: 'app-uses',
   standalone: true,
   imports: [],
-  templateUrl: './uses.component.html'
+  templateUrl: './uses.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UsesComponent implements OnInit {
-  private contentService = inject(ContentService);
-  usesCategories: UsesCategory[] = [];
-
-  ngOnInit() {
-    this.contentService.getUses().subscribe(data => {
-      this.usesCategories = data;
-    });
-  }
+export class UsesComponent {
+  private readonly contentService = inject(ContentService);
+  protected readonly usesCategories = toSignal(this.contentService.getUses(), { initialValue: [] });
 }

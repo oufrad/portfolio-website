@@ -1,20 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ContentService } from '../core/services/content.service';
-import { AboutData } from '../core/models/about.model';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [],
-  templateUrl: './about.component.html'
+  templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutComponent implements OnInit {
-  private contentService = inject(ContentService);
-  aboutData: AboutData | null = null;
-
-  ngOnInit() {
-    this.contentService.getAbout().subscribe(data => {
-      this.aboutData = data;
-    });
-  }
+export class AboutComponent {
+  private readonly contentService = inject(ContentService);
+  protected readonly aboutData = toSignal(this.contentService.getAbout());
 }

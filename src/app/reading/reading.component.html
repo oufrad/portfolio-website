@@ -3,7 +3,7 @@
   <p>Over the years I've built up the habit of taking my Kindle everywhere I go and reading books or saved articles instead of scrolling through social media. Here is a list of all the books I've read in the past.</p>
 </div>
 
-@for (year of readingYears; track year.year) {
+@for (year of readingYears(); track year.year) {
   <section class="mb-12">
     <h2 class="mb-3 text-base font-black">{{ year.year }}</h2>
     <div class="space-y-4 sm:space-y-1">

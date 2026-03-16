@@ -9,17 +9,17 @@
   <p>When I'm not at the computer I enjoy a ride with my mountain bike, a hike through the Swiss alps, or <a href="/reading">a good book</a>.</p>
   <p>I'm also an avid gym-goer, <a href="/posts/2020/11/14/podcasts-2020/">podcast listener</a> and occasional PS4 gamer.</p>
 
-  @if (aboutData) {
+  @if (aboutData(); as data) {
     <h2 id="links">Links</h2>
     <ul>
-      @for (link of aboutData.links; track link.name) {
+      @for (link of data.links; track link.name) {
         <li><a [href]="link.url">{{ link.name }}</a></li>
       }
     </ul>
 
     <h2 id="talks">Talks</h2>
     <ul>
-      @for (talk of aboutData.talks; track talk.title) {
+      @for (talk of data.talks; track talk.title) {
         <li>
           {{ talk.title }}
           @if (talk.recordingUrl) {
@@ -32,7 +32,7 @@
 
     <h2 id="interviews">Interviews</h2>
     <ul>
-      @for (interview of aboutData.interviews; track interview.url) {
+      @for (interview of data.interviews; track interview.url) {
         <li><a [href]="interview.url">{{ interview.title }}</a></li>
       }
     </ul>
@@ -40,7 +40,7 @@
     <h2 id="people-i-would-like-to-meet">People I would like to meet</h2>
     <p>An ongoing list of people that inspired me in some way or another and I'd like to meet in person.</p>
     <ul class="task-list">
-      @for (person of aboutData.people; track person.name) {
+      @for (person of data.people; track person.name) {
         <li class="task-list-item">
           <div class="checkbox">
             <input type="checkbox" [checked]="person.met" disabled>

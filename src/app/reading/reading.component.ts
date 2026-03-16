@@ -1,20 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ContentService } from '../core/services/content.service';
-import { ReadingYear } from '../core/models/reading.model';
 
 @Component({
   selector: 'app-reading',
   standalone: true,
   imports: [],
-  templateUrl: './reading.component.html'
+  templateUrl: './reading.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ReadingComponent implements OnInit {
-  private contentService = inject(ContentService);
-  readingYears: ReadingYear[] = [];
-
-  ngOnInit() {
-    this.contentService.getReading().subscribe(data => {
-      this.readingYears = data;
-    });
-  }
+export class ReadingComponent {
+  private readonly contentService = inject(ContentService);
+  protected readonly readingYears = toSignal(this.contentService.getReading(), { initialValue: [] });
 }

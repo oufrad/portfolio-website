@@ -1,20 +1,15 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { ContentService } from '../core/services/content.service';
-import { ProjectCategory } from '../core/models/project.model';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
   imports: [],
-  templateUrl: './projects.component.html'
+  templateUrl: './projects.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProjectsComponent implements OnInit {
-  private contentService = inject(ContentService);
-  projectCategories: ProjectCategory[] = [];
-
-  ngOnInit() {
-    this.contentService.getProjects().subscribe(data => {
-      this.projectCategories = data;
-    });
-  }
+export class ProjectsComponent {
+  private readonly contentService = inject(ContentService);
+  protected readonly projectCategories = toSignal(this.contentService.getProjects(), { initialValue: [] });
 }

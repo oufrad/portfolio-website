@@ -9,7 +9,7 @@
 </div>
 
 <section>
-  @for (yearGroup of articleYears; track yearGroup.year) {
+  @for (yearGroup of articleYears(); track yearGroup.year) {
     <h2 class="mb-3 text-base font-black">{{ yearGroup.year }}</h2>
     <div class="mb-12">
       @for (article of yearGroup.articles; track article.slug) {
