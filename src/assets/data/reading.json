@@ -2,26 +2,47 @@
   {
     "year": 2025,
     "books": [
-      { "title": "We Solve Murders", "author": "Richard Osman" },
-      { "title": "Be Useful - Seven Tools for Life", "author": "Arnold Schwarzenegger" },
-      { "title": "Drei Tage, Zwei Frauen, Ein Affe und der Sinn des Lebens", "author": "Karolien Notebaert" },
-      { "title": "Warum Kindern Ihren Eltern nichts schulden", "author": "Barbara Bleisch" }
+      { "title": "Kafka on the Shore", "author": "Haruki Murakami" },
+      { "title": "1984", "author": "George Orwell" },
+      { "title": "The Idiot", "author": "Fyodor Dostoevsky" },
+      { "title": "Atomic Habits", "author": "James Clear" }
     ]
   },
   {
     "year": 2024,
     "books": [
-      { "title": "The Shape of Design", "author": "Frank Chimero" },
-      { "title": "Death's End", "author": "Liu Cixin" },
-      { "title": "Things Become Other Things", "author": "Craig Mod" },
-      { "title": "The Restaurant at the End of the Universe", "author": "Douglas Adams" }
+      { "title": "Flowers for Algernon", "author": "Daniel Keyes" },
+      { "title": "Into the Wild", "author": "Jon Krakauer" },
+      { "title": "The Psychology of Money", "author": "Morgan Housel" },
+      { "title": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari" },
+      { "title": "Why We Sleep", "author": "Matthew Walker" }
     ]
   },
   {
     "year": 2023,
     "books": [
-      { "title": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams" },
-      { "title": "Project Hail Mary", "author": "Andy Weir" }
+      { "title": "So Good They Can't Ignore You", "author": "Cal Newport" },
+      { "title": "Deep Work", "author": "Cal Newport" },
+      { "title": "The Stranger", "author": "Albert Camus" },
+      { "title": "I Will Teach You to Be Rich", "author": "Ramit Sethi" },
+      { "title": "Meditations", "author": "Marcus Aurelius" },
+      { "title": "The Death of Ivan Ilych", "author": "Leo Tolstoy" },
+      { "title": "Death with Interruptions", "author": "José Saramago" },
+      { "title": "The Metamorphosis", "author": "Franz Kafka" },
+      { "title": "The Art of Always Being Right", "author": "Arthur Schopenhauer" },
+      { "title": "The Trial", "author": "Franz Kafka" },
+      { "title": "Les Misérables", "author": "Victor Hugo" },
+      { "title": "Veronika Decides to Die", "author": "Paulo Coelho" },
+      { "title": "The Brothers Karamazov", "author": "Fyodor Dostoevsky" },
+      { "title": "Crime and Punishment", "author": "Fyodor Dostoevsky" },
+      { "title": "The Alchemist", "author": "Paulo Coelho" },
+      { "title": "50 Great Myths of Popular Psychology", "author": "Scott O. Lilienfeld" },
+      { "title": "The Compound Effect", "author": "Darren Hardy" },
+      { "title": "أرض زيكولا", "author": "عمرو عبد الحميد" },
+      { "title": "في قلبي أنثى عبرية", "author": "Khaoula Hamdi" },
+      { "title": "Notes from Underground", "author": "Fyodor Dostoevsky" }
+      { "title": "The Prince", "author": "Niccolò Machiavelli" }
+
     ]
   }
 ]
