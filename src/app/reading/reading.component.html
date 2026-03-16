@@ -8,9 +8,11 @@
     <h2 class="mb-3 text-base font-black">{{ year.year }}</h2>
     <div class="space-y-4 sm:space-y-1">
       @for (book of year.books; track book.title) {
-        <article class="grid sm:grid-cols-9 gap-x-2 md:gap-y-2 text-sm">
-          <div class="sm:col-span-4 font-semibold">{{ book.title }}</div>
-          <div class="sm:col-span-2 truncate" [title]="book.author">{{ book.author }}</div>
+        <article class="grid sm:grid-cols-9 gap-x-2 md:gap-y-2 text-sm" itemscope itemtype="http://schema.org/Book">
+          <div class="sm:col-span-4 font-semibold" itemprop="name">{{ book.title }}</div>
+          <div class="sm:col-span-2 truncate" itemprop="author" [title]="book.author">{{ book.author }}</div>
+          <div class="text-xs sm:text-sm sm:col-span-2 tabular-nums" itemprop="dateCreated">{{ book.date ?? '' }}</div>
+          <div class="text-xs sm:text-sm text-slate-900">{{ '★'.repeat(book.rating ?? 0) }}{{ '☆'.repeat(5 - (book.rating ?? 0)) }}</div>
         </article>
       }
     </div>
