@@ -4,6 +4,9 @@ we're building the app described in @SPEC.md. read that file for general archite
 
 keep your answers extremely concise and focus on conveying the key information. no neccessery fluff, no long code snippets.
 
+whenever working with any third-party library or something similar, you must look up the official documentation to ensure that you're working with up-to-date information. 
+use the DocsExplorer subagent for effecient documentation lookup.
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Commands
