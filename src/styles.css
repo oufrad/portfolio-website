@@ -2466,3 +2466,142 @@ h6:hover .prose .heading-permalink,
         padding-right: 0
     }
 }
+
+/* ============================================================
+   Dark Mode Theme
+   ============================================================ */
+
+:root {
+    --bg: #ffffff;
+    --bg-subtle: #f9fafb;
+    --bg-hover: #f3f4f6;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --border: #e5e7eb;
+    --nav-text: #475569;
+    --link-hover-bg: #f3f4f6;
+    --code-bg: #f8fafc;
+}
+
+html.dark {
+    --bg: #18181b;          /* zinc-900 */
+    --bg-subtle: #27272a;   /* zinc-800 */
+    --bg-hover: #3f3f46;    /* zinc-700 */
+    --text-primary: #fafafa; /* zinc-50 */
+    --text-secondary: #a1a1aa; /* zinc-400 */
+    --border: #3f3f46;      /* zinc-700 */
+    --nav-text: #a1a1aa;
+    --link-hover-bg: #27272a;
+    --code-bg: #27272a;
+}
+
+/* Base */
+body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Header */
+html.dark header a {
+    color: var(--text-primary);
+}
+
+html.dark header a:hover {
+    background-color: var(--bg-hover);
+}
+
+html.dark header nav {
+    color: var(--nav-text);
+}
+
+html.dark header nav a {
+    color: var(--text-secondary);
+}
+
+/* Dark mode toggle button */
+html.dark .dark-toggle {
+    color: var(--text-secondary);
+}
+
+html.dark .dark-toggle:hover {
+    background-color: var(--bg-hover);
+}
+
+/* Text colors */
+html.dark .text-slate-600,
+html.dark .text-slate-700,
+html.dark .text-slate-800,
+html.dark .text-slate-900 {
+    color: var(--text-secondary);
+}
+
+html.dark .text-gray-500,
+html.dark .text-gray-600,
+html.dark .text-gray-700 {
+    color: var(--text-secondary);
+}
+
+/* Prose headings */
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4 {
+    color: var(--text-primary);
+}
+
+/* Prose paragraphs */
+html.dark .prose p,
+html.dark .prose li {
+    color: #d4d4d8;
+}
+
+/* Force nav tab hover to match background — no visible hover */
+html.dark header nav a:hover,
+header nav a:hover {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Backgrounds */
+html.dark .bg-gray-50,
+html.dark .bg-gray-100 {
+    background-color: var(--bg-subtle);
+}
+
+
+/* Borders */
+html.dark .border,
+html.dark .border-gray-200,
+html.dark .border-slate-200,
+html.dark .divide-gray-200 > * + * {
+    border-color: var(--border);
+}
+
+/* Prose / article content */
+html.dark .prose {
+    color: var(--text-primary);
+}
+
+html.dark .prose a,
+html.dark a:not([class]) {
+    color: #a1a1aa;
+}
+
+html.dark .prose a:hover,
+html.dark a:not([class]):hover {
+    color: #d4d4d8;
+}
+
+/* Code blocks */
+html.dark code,
+html.dark pre {
+    background-color: var(--code-bg);
+    color: var(--text-primary);
+}
+
+/* Footer */
+html.dark footer {
+    color: var(--text-secondary);
+    border-color: var(--border);
+}

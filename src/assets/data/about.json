@@ -1,0 +1,21 @@
+{
+  "bio": [
+    "Hi, I'm Mohamed.",
+    "I currently work as a Software Engineer and Data Engineer at <a href=\"https://www.hahn-software.de\">Hahn Software</a>, where I work on building software systems and data solutions.",
+    "I'm based in Rabat, Morocco."
+  ],
+  "links": [
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mohamed-oufrad/" },
+    { "name": "GitHub", "url": "https://github.com/oufrad" },
+    { "name": "Email", "url": "mailto:oufrad00@gmail.com" }
+  ],
+  "talks": [
+    
+  ],
+  "interviews": [
+    
+  ],
+  "people": [
+   
+  ]
+}

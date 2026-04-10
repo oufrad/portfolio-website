@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2025,
+    "books": [
+      { "title": "Kafka on the Shore", "author": "Haruki Murakami", "date": "2025-11-09", "rating": 4 },
+      { "title": "1984", "author": "George Orwell", "date": "2025-02-24" },
+      { "title": "The Idiot", "author": "Fyodor Dostoevsky" },
+      { "title": "Atomic Habits", "author": "James Clear" }
+    ]
+  },
+  {
+    "year": 2024,
+    "books": [
+      { "title": "Flowers for Algernon", "author": "Daniel Keyes", "date": "2024-11-23" },
+      { "title": "Into the Wild", "author": "Jon Krakauer", "date": "2024-10-16" },
+      { "title": "The Psychology of Money", "author": "Morgan Housel", "date": "2024-07-23" },
+      { "title": "Sapiens: A Brief History of Humankind", "author": "Yuval Noah Harari", "date": "2024-04-09" },
+      { "title": "Why We Sleep", "author": "Matthew Walker", "date": "2024-03-05" }
+    ]
+  },
+  {
+    "year": 2023,
+    "books": [
+      { "title": "So Good They Can't Ignore You", "author": "Cal Newport", "date": "2023-11-23" },
+      { "title": "Deep Work", "author": "Cal Newport", "date": "2023-11-01" },
+      { "title": "The Stranger", "author": "Albert Camus", "date": "2023-10-22" },
+      { "title": "I Will Teach You to Be Rich", "author": "Ramit Sethi", "date": "2023-10-10" },
+      { "title": "Meditations", "author": "Marcus Aurelius" },
+      { "title": "The Death of Ivan Ilych", "author": "Leo Tolstoy" },
+      { "title": "Death with Interruptions", "author": "José Saramago" },
+      { "title": "The Metamorphosis", "author": "Franz Kafka" },
+      { "title": "The Art of Always Being Right", "author": "Arthur Schopenhauer" },
+      { "title": "The Trial", "author": "Franz Kafka" },
+      { "title": "Les Misérables", "author": "Victor Hugo" },
+      { "title": "Veronika Decides to Die", "author": "Paulo Coelho" },
+      { "title": "The Brothers Karamazov", "author": "Fyodor Dostoevsky" },
+      { "title": "Crime and Punishment", "author": "Fyodor Dostoevsky" },
+      { "title": "The Alchemist", "author": "Paulo Coelho" },
+      { "title": "50 Great Myths of Popular Psychology", "author": "Scott O. Lilienfeld" },
+      { "title": "The Compound Effect", "author": "Darren Hardy" },
+      { "title": "أرض زيكولا", "author": "عمرو عبد الحميد" },
+      { "title": "في قلبي أنثى عبرية", "author": "Khaoula Hamdi" },
+      { "title": "Notes from Underground", "author": "Fyodor Dostoevsky" },
+      { "title": "The Prince", "author": "Niccolò Machiavelli" }
+    ]
+  }
+]

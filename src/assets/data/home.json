@@ -1,0 +1,17 @@
+{
+  "name": "Mohamed Oufrad",
+  "title": "Software Engineer | Data Engineer",
+  "bio": [
+    "I'm a Software Engineer and Data Engineer currently working at <a href=\"https://www.hahn-software.de\">Hahn Software</a>, based in Rabat, Morocco.",
+    "I enjoy building scalable software systems and working with data pipelines and engineering challenges.",
+    "On this website I share projects, things I'm reading, and tools I use."
+  ],
+  "socialLinks": [
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/mohamed-oufrad/" },
+    { "name": "GitHub", "url": "https://github.com/mohamed-oufrad" },
+    { "name": "Email", "url": "mailto:mohamed.oufrad@email.com" }
+  ],
+  "selectedWriting": [
+   
+  ]
+}
