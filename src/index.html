@@ -2,10 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>PortfolioApp</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <title>Mohamed Oufrad — Software & Data Engineer</title>
+  <meta name="description"
+        content="Mohamed Oufrad is a software and data engineer in Rabat, Morocco, building scalable systems and data pipelines.">
+  <meta name="author" content="Mohamed Oufrad">
+
+  <link rel="canonical" href="https://oufrad.dev/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mohamed Oufrad">
+  <meta property="og:title" content="Mohamed Oufrad — Software & Data Engineer">
+  <meta property="og:description"
+        content="Mohamed Oufrad is a software and data engineer in Rabat, Morocco, building scalable systems and data pipelines.">
+  <meta property="og:url" content="https://oufrad.dev/">
+  <meta property="og:image" content="https://oufrad.dev/assets/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mohamed Oufrad — Software & Data Engineer">
+  <meta name="twitter:description"
+        content="Mohamed Oufrad is a software and data engineer in Rabat, Morocco, building scalable systems and data pipelines.">
+  <meta name="twitter:image" content="https://oufrad.dev/assets/og-image.png">
+
+  <meta name="theme-color" content="#FBFAF9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161413" media="(prefers-color-scheme: dark)">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohamed Oufrad",
+      "jobTitle": "Software Engineer & Data Engineer",
+      "url": "https://oufrad.dev/",
+      "email": "mailto:oufrad00@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rabat",
+        "addressCountry": "MA"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Hahn Software",
+        "url": "https://www.hahn-software.de"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/mohamed-oufrad/",
+        "https://github.com/oufrad"
+      ]
+    }
+  </script>
+
+  <!-- Applies the stored theme before first paint. Without this, prerendered
+       pages flash white for dark-mode visitors on every load. -->
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var dark = stored === 'dark' ||
+          (stored === null && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>
