@@ -1,0 +1,95 @@
+:host {
+  display: block;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  padding-block: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.brand {
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--txt-0);
+  letter-spacing: -0.02em;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  color: var(--txt-2);
+  position: relative;
+  padding-block: 0.25rem;
+}
+
+.nav-link:hover {
+  color: var(--accent);
+}
+
+/* Active state: the old template bound routerLinkActive to an empty string,
+   so the current page was never indicated. */
+.nav-link.active {
+  color: var(--txt-0);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--accent);
+}
+
+.theme-toggle {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  color: var(--txt-2);
+  border: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--bg-3);
+}
+
+@media (max-width: 560px) {
+  header {
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  nav {
+    gap: 1rem;
+  }
+}

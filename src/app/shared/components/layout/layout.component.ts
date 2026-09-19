@@ -7,6 +7,7 @@ import { FooterComponent } from '../footer/footer.component';
   standalone: true,
   imports: [HeaderComponent, FooterComponent],
   templateUrl: './layout.component.html',
+  styleUrl: './layout.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LayoutComponent {}

@@ -9,6 +9,7 @@ import { ThemeService } from '../../../core/services/theme.service';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderComponent {

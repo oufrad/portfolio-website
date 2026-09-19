@@ -7,6 +7,7 @@ import { ContentService } from '../../../core/services/content.service';
   standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
