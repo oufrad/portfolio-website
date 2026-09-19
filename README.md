@@ -1,27 +1,64 @@
-# PortfolioApp
+# Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+Personal site for Mohamed Oufrad — software engineer and data engineer, Rabat, Morocco.
 
-## Development server
+Angular 17, standalone components, signals, SSR with prerendering. No CSS
+framework: styling is a hand-written token layer plus per-component CSS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Commands
 
-## Code scaffolding
+```bash
+npm start        # dev server -> http://localhost:4200
+npm run build    # production build + prerender -> dist/portfolio-app
+npm test         # unit tests (Karma + Jasmine)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+npm run serve:ssr:portfolio-app   # run the SSR server (after a build) -> :4000
+```
 
-## Build
+Tests need a Chromium binary. If Chrome isn't installed at the default path:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```bash
+export CHROME_BIN="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+npx ng test --watch=false --browsers=ChromeHeadless
+```
 
-## Running unit tests
+## Editing content
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+All content lives in `src/assets/data/` as JSON — no code changes needed to
+update the site.
 
-## Running end-to-end tests
+| File | Drives |
+|---|---|
+| `site.json` | Site name, nav links, footer links |
+| `home.json` | Name, title, homepage bio, social links |
+| `about.json` | About-page bio and links |
+| `experience.json` | Work history timeline on `/about` |
+| `projects.json` | `/projects` cards, including tech tags |
+| `articles.json` | `/articles`, grouped by year |
+| `reading.json` | `/reading`, grouped by year, optional 1–5 rating |
+| `uses.json` | `/uses`, grouped by category |
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Empty arrays render a proper empty state, and categories with no items are
+skipped — a section will never show as a heading with nothing under it.
 
-## Further help
+## Before publishing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Replace every entry prefixed `PLACEHOLDER —` in `projects.json` and
+   `experience.json`. Fill in the `start`/`end` months for the Hahn Software
+   entry; they're deliberately omitted rather than guessed.
+2. Set `SITE_URL` in `src/app/core/site.config.ts` to the real domain, and
+   update the matching absolute URLs in `src/index.html` (canonical, `og:url`,
+   `og:image`, `twitter:image`, and the JSON-LD block).
+
+## Design
+
+Warm charcoal and amber, light and dark, IBM Plex Mono for headings and UI with
+IBM Plex Sans for body copy. Tokens are defined on `:root` and overridden under
+`html.dark`; see [CLAUDE.md](CLAUDE.md) for the full list and the rules around
+them. Every text colour clears WCAG AA against its own background.
+
+The homepage hero sits over `AsciiFieldComponent`, a canvas field of ASCII
+glyphs tracing contours through layered sine waves and value noise, with a bulge
+that follows the pointer. It reads its colour from CSS custom properties so it
+follows the theme, throttles to ~20fps, runs outside Angular's zone, and draws a
+single static frame under `prefers-reduced-motion`.
