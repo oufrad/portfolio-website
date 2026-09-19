@@ -1,24 +1,48 @@
-<div class="prose mb-10">
-  <h1>Projects</h1>
-  <p>As a developer I run into problems every day. Whenever possible, I try to publish my solutions as open source software so others can benefit and build upon them.</p>
-</div>
+<div class="page">
+  <header class="page-head">
+    <h1>Projects<span class="count" [attr.aria-label]="total() + ' projects'">[{{ countLabel() }}]</span></h1>
+    <p class="lede">
+      Things I've built — software systems, data pipelines, and tools I open sourced
+      so other people can use them.
+    </p>
+  </header>
 
-<dl class="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-4">
-  @for (category of projectCategories(); track category.category) {
-    @for (project of category.projects; track project.name) {
-      <a [href]="project.url" class="block transition rounded-lg -mx-3 p-3 border-2 border-transparent hover:bg-slate-50/25 hover:border-slate-300 hover:border-dashed">
-        <dl class="mt-2 mb-1">
-          <dt class="text-slate-800 flex items-start gap-2">
-            <h2 class="font-semibold">{{ project.name }}</h2>
-            @if (project.featured) {
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-500 shrink-0">
-                <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clip-rule="evenodd" />
-              </svg>
+  @if (total()) {
+    @for (category of projectCategories(); track category.category) {
+      @if (category.projects.length) {
+        <section>
+          @if (projectCategories().length > 1) {
+            <h2>{{ category.category }}</h2>
+          }
+
+          <ul class="grid">
+            @for (project of category.projects; track project.name) {
+              <li>
+                <a class="card plain" [href]="linkFor(project)">
+                  <div class="card-head">
+                    <h3>{{ project.name }}</h3>
+                    @if (project.year) {
+                      <span class="year">{{ project.year }}</span>
+                    }
+                  </div>
+
+                  <p class="description">{{ project.description }}</p>
+
+                  @if (project.tech?.length) {
+                    <ul class="tech">
+                      @for (item of project.tech; track item) {
+                        <li class="tag">{{ item }}</li>
+                      }
+                    </ul>
+                  }
+                </a>
+              </li>
             }
-          </dt>
-          <dd class="text-slate-600 text-sm">{{ project.description }}</dd>
-        </dl>
-      </a>
+          </ul>
+        </section>
+      }
     }
+  } @else {
+    <p class="empty">No projects listed yet.</p>
   }
-</dl>
+</div>

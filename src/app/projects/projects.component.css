@@ -1,0 +1,84 @@
+:host {
+  display: block;
+}
+
+section + section {
+  margin-top: 3rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--bg-2);
+  border: 2px solid var(--bg-3);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.card:hover h3 {
+  color: var(--accent);
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  margin: 0;
+  transition: color 0.2s ease;
+}
+
+.year {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--txt-3);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--txt-2);
+  margin-top: 0.5rem;
+  flex: 1;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}

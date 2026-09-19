@@ -2,7 +2,28 @@
   {
     "category": "Featured Projects",
     "projects": [
-     
+      {
+        "name": "PLACEHOLDER — data pipeline project",
+        "description": "Replace with one line on what this pipeline ingests, transforms and serves, and why it exists.",
+        "url": "https://github.com/oufrad",
+        "repoUrl": "https://github.com/oufrad",
+        "tech": ["Python", "Airflow", "PostgreSQL"],
+        "featured": true
+      },
+      {
+        "name": "PLACEHOLDER — web application",
+        "description": "Replace with one line on the problem this application solves and who it is for.",
+        "url": "https://github.com/oufrad",
+        "repoUrl": "https://github.com/oufrad",
+        "tech": ["TypeScript", "Angular"]
+      },
+      {
+        "name": "PLACEHOLDER — open source tool",
+        "description": "Replace with one line on what this tool does and what it saves you from doing by hand.",
+        "url": "https://github.com/oufrad",
+        "repoUrl": "https://github.com/oufrad",
+        "tech": ["Go"]
+      }
     ]
   }
 ]
