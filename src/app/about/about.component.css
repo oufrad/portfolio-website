@@ -1,0 +1,111 @@
+:host {
+  display: block;
+}
+
+.bio {
+  max-width: var(--measure);
+}
+
+.bio p + p {
+  margin-top: 1rem;
+}
+
+.bio ::ng-deep a {
+  font-weight: 600;
+  text-decoration-color: var(--txt-3);
+}
+
+.bio ::ng-deep a:hover {
+  text-decoration-color: var(--accent);
+}
+
+section {
+  margin-top: 3.5rem;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.timeline {
+  max-width: var(--measure);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 2px solid var(--bg-3);
+}
+
+.timeline > li {
+  position: relative;
+  padding-left: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.timeline > li:last-child {
+  padding-bottom: 0;
+}
+
+/* Node on the rule. */
+.timeline > li::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0.55em;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+}
+
+.role-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+}
+
+.role-line h3 {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.dates {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--txt-3);
+  white-space: nowrap;
+}
+
+.org {
+  font-size: 1rem;
+  color: var(--txt-2);
+  margin-top: 0.25rem;
+}
+
+.location {
+  color: var(--txt-3);
+}
+
+.summary {
+  font-size: 1rem;
+  margin-top: 0.75rem;
+}
+
+.highlights {
+  margin-top: 0.75rem;
+  color: var(--txt-2);
+}
+
+.highlights li {
+  margin-top: 0.35rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+}

@@ -1,48 +1,63 @@
-<article class="prose">
-  <h1>About</h1>
+<div class="page">
+  <header class="page-head">
+    <h1>About</h1>
+  </header>
 
   @if (aboutData(); as data) {
-    @for (p of data.bio; track p) {
-      <p [innerHTML]="p"></p>
-    }
-    <h2 id="links">Links</h2>
-    <ul>
-      @for (link of data.links; track link.name) {
-        <li><a [href]="link.url">{{ link.name }}</a></li>
+    <div class="bio">
+      @for (paragraph of data.bio; track paragraph) {
+        <p [innerHTML]="paragraph"></p>
       }
-    </ul>
+    </div>
 
-    <h2 id="talks">Talks</h2>
-    <ul>
-      @for (talk of data.talks; track talk.title) {
-        <li>
-          {{ talk.title }}
-          @if (talk.recordingUrl) {
-            (<a [href]="talk.recordingUrl">Recording</a>@if (talk.slidesUrl) {, <a [href]="talk.slidesUrl">Slides</a>})
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+
+      @if (experience().length) {
+        <ol class="timeline">
+          @for (item of experience(); track item.company) {
+            <li>
+              <div class="role-line">
+                <h3>{{ item.role }}</h3>
+                @if (dateRange(item); as range) {
+                  <span class="dates">{{ range }}</span>
+                }
+              </div>
+              <p class="org">
+                @if (item.companyUrl) {
+                  <a [href]="item.companyUrl">{{ item.company }}</a>
+                } @else {
+                  {{ item.company }}
+                }
+                @if (item.location) {
+                  <span class="location">· {{ item.location }}</span>
+                }
+              </p>
+              @if (item.summary) {
+                <p class="summary">{{ item.summary }}</p>
+              }
+              @if (item.highlights?.length) {
+                <ul class="highlights">
+                  @for (highlight of item.highlights; track highlight) {
+                    <li>{{ highlight }}</li>
+                  }
+                </ul>
+              }
+            </li>
           }
-          - {{ talk.description }}
-        </li>
+        </ol>
+      } @else {
+        <p class="empty">No experience entries yet.</p>
       }
-    </ul>
+    </section>
 
-    <h2 id="interviews">Interviews</h2>
-    <ul>
-      @for (interview of data.interviews; track interview.url) {
-        <li><a [href]="interview.url">{{ interview.title }}</a></li>
-      }
-    </ul>
-
-    <h2 id="people-i-would-like-to-meet">People I would like to meet</h2>
-    <p>An ongoing list of people that inspired me in some way or another and I'd like to meet in person.</p>
-    <ul class="task-list">
-      @for (person of data.people; track person.name) {
-        <li class="task-list-item">
-          <div class="checkbox">
-            <input type="checkbox" [checked]="person.met" disabled>
-            <label><a [href]="person.url">{{ person.name }}</a></label>
-          </div>
-        </li>
-      }
-    </ul>
+    <section aria-labelledby="links-heading">
+      <h2 id="links-heading">Elsewhere</h2>
+      <ul class="links">
+        @for (link of data.links; track link.name) {
+          <li><a [href]="link.url">{{ link.name }}</a></li>
+        }
+      </ul>
+    </section>
   }
-</article>
+</div>
