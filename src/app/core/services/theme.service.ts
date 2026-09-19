@@ -15,10 +15,10 @@ export class ThemeService {
   private init(): void {
     if (!this.isBrowser) return;
 
-    const stored = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const dark = stored === 'dark' || (stored === null && prefersDark);
-    this.apply(dark);
+    // The inline script in index.html has already applied the class before
+    // first paint. Read back from the DOM rather than re-deriving it, so the
+    // two can never disagree.
+    this.isDark.set(this.document.documentElement.classList.contains('dark'));
   }
 
   toggle(): void {
