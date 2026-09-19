@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 
 import { ReadingComponent } from './reading.component';
 
@@ -8,10 +11,10 @@ describe('ReadingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ReadingComponent]
-    })
-    .compileComponents();
-    
+      imports: [ReadingComponent],
+      providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting()]
+    }).compileComponents();
+
     fixture = TestBed.createComponent(ReadingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
