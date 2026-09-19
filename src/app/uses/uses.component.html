@@ -1,23 +1,31 @@
-<article class="prose">
-  <h1>Uses</h1>
-  <p>This is a complete list of the tools, apps, services and hardware I use on a regular basis.</p>
-  <p>If you want to see setups of other people, check out <a href="https://github.com/wesbos/awesome-uses">github.com/wesbos/awesome-uses</a>.</p>
+<div class="page">
+  <header class="page-head">
+    <h1>Uses</h1>
+    <p class="lede">
+      The hardware, software and services I use regularly. For other people's setups,
+      see <a href="https://github.com/wesbos/awesome-uses">awesome-uses</a>.
+    </p>
+  </header>
 
-  @for (category of usesCategories(); track category.category) {
-    <h2>{{ category.category }}</h2>
-    <ul>
-      @for (item of category.items; track item.name) {
-        <li>
-          @if (item.url) {
-            <a [href]="item.url">{{ item.name }}</a>
-          } @else {
-            {{ item.name }}
-          }
-          @if (item.description) {
-            - {{ item.description }}
-          }
-        </li>
-      }
-    </ul>
+  @for (category of categories(); track category.category) {
+    <section>
+      <h2>{{ category.category }}</h2>
+      <ul class="items">
+        @for (item of category.items; track item.name) {
+          <li>
+            @if (item.url) {
+              <a [href]="item.url">{{ item.name }}</a>
+            } @else {
+              <span class="name">{{ item.name }}</span>
+            }
+            @if (item.description) {
+              <span class="description"> — {{ item.description }}</span>
+            }
+          </li>
+        }
+      </ul>
+    </section>
+  } @empty {
+    <p class="empty">Nothing listed yet.</p>
   }
-</article>
+</div>

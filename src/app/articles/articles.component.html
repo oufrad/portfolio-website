@@ -1,30 +1,22 @@
-<div class="prose mb-10">
-  <h1>Articles</h1>
-</div>
+<div class="page">
+  <header class="page-head">
+    <h1>Articles</h1>
+    <p class="lede">Notes on software engineering, data work, and things I've learned along the way.</p>
+  </header>
 
-<section>
-  @for (yearGroup of articleYears(); track yearGroup.year) {
-    <h2 class="mb-3 text-base font-black">{{ yearGroup.year }}</h2>
-    <div class="mb-12">
-      @for (article of yearGroup.articles; track article.slug) {
-        <article class="md:flex justify-between mb-1">
-          <h4>
-            <a [href]="article.url" class="text-gray-800 font-normal no-underline hover:underline">
-              {{ article.title }}
-            </a>
-          </h4>
-          <div class="mt-1 mb-6 sm:m-0 shrink-0">
-            <dl>
-              <dt class="sr-only">Published at</dt>
-              <dd>
-                <time class="text-gray-600 text-sm font-medium tabular-nums" [attr.datetime]="article.date">
-                  {{ article.date }}
-                </time>
-              </dd>
-            </dl>
-          </div>
-        </article>
-      }
-    </div>
+  @for (year of articleYears(); track year.year) {
+    <section>
+      <h2>{{ year.year }}</h2>
+      <ul class="articles">
+        @for (article of year.articles; track article.slug) {
+          <li>
+            <a [href]="article.url">{{ article.title }}</a>
+            <time class="date" [attr.datetime]="article.date">{{ article.date }}</time>
+          </li>
+        }
+      </ul>
+    </section>
+  } @empty {
+    <p class="empty">No articles published yet.</p>
   }
-</section>
+</div>

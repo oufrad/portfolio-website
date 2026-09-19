@@ -3,29 +3,7 @@
     "category": "Hardware",
     "items": [
       { "name": "Apple MacBook Pro (14-inch, M1 Pro, 2021)" },
-      { "name": "Sumsung S24" } 
-    ]
-  },
-  {
-    "category": "Audio",
-    "items": [
-    ]
-  },
-  {
-    "category": "Global Services",
-    "items": [
-
-    ]
-  },
-  {
-    "category": "macOS Apps",
-    "items": [
-    ]
-  },
-  {
-    "category": "Global Apps",
-    "items": [
-    
+      { "name": "Samsung S24" }
     ]
   }
 ]
