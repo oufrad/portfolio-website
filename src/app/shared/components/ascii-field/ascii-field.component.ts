@@ -79,7 +79,6 @@ function valueNoise(x: number, y: number): number {
  */
 @Component({
   selector: 'app-ascii-field',
-  standalone: true,
   template: `<canvas #canvas aria-hidden="true"></canvas>`,
   styleUrl: './ascii-field.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush

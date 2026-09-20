@@ -5,7 +5,6 @@ import { AsciiFieldComponent } from '../shared/components/ascii-field/ascii-fiel
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   imports: [AsciiFieldComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

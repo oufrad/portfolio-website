@@ -5,7 +5,6 @@ import { ArticleYear } from '../core/models/article.model';
 
 @Component({
   selector: 'app-articles',
-  standalone: true,
   imports: [],
   templateUrl: './articles.component.html',
   styleUrl: './articles.component.css',

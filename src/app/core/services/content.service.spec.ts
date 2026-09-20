@@ -1,9 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { provideHttpClient } from '@angular/common/http';
-import {
-  HttpTestingController,
-  provideHttpClientTesting
-} from '@angular/common/http/testing';
+import { provideHttpClient, withXhr } from '@angular/common/http';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { ContentService } from './content.service';
 import { Experience } from '../models/experience.model';
 
@@ -13,7 +10,7 @@ describe('ContentService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ContentService, provideHttpClient(), provideHttpClientTesting()]
+      providers: [ContentService, provideHttpClient(withXhr()), provideHttpClientTesting()]
     });
     service = TestBed.inject(ContentService);
     httpMock = TestBed.inject(HttpTestingController);

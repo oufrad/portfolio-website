@@ -4,7 +4,6 @@ import { ContentService } from '../../../core/services/content.service';
 
 @Component({
   selector: 'app-footer',
-  standalone: true,
   imports: [],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css',
