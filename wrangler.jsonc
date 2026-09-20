@@ -1,0 +1,14 @@
+{
+  // Assets-only Worker: no "main" script, which is what keeps this on
+  // Cloudflare's free-and-unlimited static asset tier.
+  // "name" must match the Worker name in the Cloudflare dashboard or builds fail.
+  "name": "portfolio-app",
+  "compatibility_date": "2026-09-20",
+  "assets": {
+    "directory": "./dist/portfolio-app/browser",
+    // Angular prerenders to about/index.html, so folders serve with a trailing slash.
+    "html_handling": "auto-trailing-slash",
+    // Mirrors the app's own { path: '**', redirectTo: '' } route.
+    "not_found_handling": "single-page-application"
+  }
+}

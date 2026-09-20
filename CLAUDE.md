@@ -22,8 +22,8 @@ ng build --configuration development  # Development build
 # Testing
 npm test               # Run unit tests via Karma
 
-# SSR (Server-Side Rendering)
-npm run serve:ssr:portfolio-app  # Run SSR server at http://localhost:4000 (requires build first)
+# Preview the production build exactly as Cloudflare serves it
+npx wrangler dev                 # Serves dist/portfolio-app/browser (requires build first)
 
 # Code Generation
 ng generate component <name>     # Generate new component
@@ -32,12 +32,15 @@ ng generate service <name>       # Generate new service
 
 ## Architecture
 
-This is an Angular 17 portfolio website with SSR support using standalone components (no NgModules).
+This is an Angular 17 portfolio website, prerendered to static HTML, using standalone components (no NgModules).
 
 ### Key Architecture Decisions
 
 - **Standalone Components**: All components use `standalone: true` - no NgModules
-- **SSR Enabled**: Pre-rendering and server-side rendering via `@angular/ssr` with Express server (`server.ts`)
+- **Static (SSG), not SSR**: `prerender: true` in `angular.json` renders every route to HTML at
+  build time; `provideClientHydration()` then hydrates it. There is no Node server — the `ssr`
+  builder option and `server.ts` were removed when the site moved to Cloudflare. `@angular/ssr`
+  and `@angular/platform-server` stay because prerendering itself depends on them.
 - **Static Content**: Content is intended to be managed via JSON files in `assets/data/` (see SPEC.md for data models)
 - **Feature-based Structure**: Each portfolio section (about, projects, reading, uses, articles) is a separate component
 
@@ -131,9 +134,19 @@ All content is JSON in `src/assets/data/`, loaded by `ContentService`. To add a
 content type: add a model in `core/models/`, a JSON file, and a `load()` line in
 `ContentService`.
 
-`projects.json` and `experience.json` currently hold entries prefixed
-`PLACEHOLDER —`. Replace them with real content; the prefix is there so they
-cannot ship unnoticed.
+`projects.json` is currently an empty array and `experience.json` holds a single real
+entry — the `PLACEHOLDER —` placeholders were removed before launch. Both pages render a
+`.empty` state when there is nothing to show, so adding content back is just a JSON edit.
 
-Before publishing, set `SITE_URL` in `core/site.config.ts` and the matching
-absolute URLs in `src/index.html`.
+`SITE_URL` in `core/site.config.ts` is `https://oufrad.com`. The same origin is hardcoded in
+five places in `src/index.html` (canonical, og:url, og:image, twitter:image, JSON-LD) and the
+two must be kept in sync.
+
+## Deployment
+
+Pushing to `main` triggers a Cloudflare Workers build that publishes
+`dist/portfolio-app/browser` as static assets (config in `wrangler.jsonc`).
+
+`.nvmrc` pins **Node 22**: Wrangler 4 refuses to run on anything older, and Angular 17 builds
+byte-identical output on it despite officially supporting only 18/20. Don't drop to 20 — the
+deploy step breaks.

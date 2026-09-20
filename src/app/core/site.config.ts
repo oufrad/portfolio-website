@@ -4,11 +4,11 @@
  * Open Graph and canonical URLs must be absolute, and this site is prerendered,
  * so the origin cannot be derived from `location` at build time.
  *
- * TODO(oufrad): set this to the real domain before publishing. The same value is
- * also written into `src/index.html` (canonical, og:url, og:image,
- * twitter:image and the JSON-LD block) and must be updated there too.
+ * The same value is also written into `src/index.html` (canonical, og:url,
+ * og:image, twitter:image and the JSON-LD block) and must be kept in sync
+ * there — changing it in one place only will emit wrong canonical tags.
  */
-export const SITE_URL = 'https://oufrad.dev';
+export const SITE_URL = 'https://oufrad.com';
 
 export const SITE_NAME = 'Mohamed Oufrad';
 
