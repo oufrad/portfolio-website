@@ -7,8 +7,11 @@
   "compatibility_date": "2026-09-20",
   "assets": {
     "directory": "./dist/portfolio-app/browser",
-    // Angular prerenders to about/index.html, so folders serve with a trailing slash.
-    "html_handling": "auto-trailing-slash",
+    // Angular prerenders to about/index.html, but SeoTitleStrategy emits canonical
+    // URLs without a trailing slash ("https://oufrad.com/about"). Serve those files
+    // at the slash-less path so the served URL and its own canonical tag agree —
+    // auto-trailing-slash 307s /about -> /about/ and breaks that.
+    "html_handling": "drop-trailing-slash",
     // Mirrors the app's own { path: '**', redirectTo: '' } route.
     "not_found_handling": "single-page-application"
   }
