@@ -5,7 +5,6 @@ import { UsesCategory } from '../core/models/uses.model';
 
 @Component({
   selector: 'app-uses',
-  standalone: true,
   imports: [],
   templateUrl: './uses.component.html',
   styleUrl: './uses.component.css',

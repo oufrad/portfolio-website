@@ -5,7 +5,6 @@ import { Project, ProjectCategory } from '../core/models/project.model';
 
 @Component({
   selector: 'app-projects',
-  standalone: true,
   imports: [],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.css',

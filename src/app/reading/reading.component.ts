@@ -8,7 +8,6 @@ const ARABIC = /[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]/;
 
 @Component({
   selector: 'app-reading',
-  standalone: true,
   imports: [],
   templateUrl: './reading.component.html',
   styleUrl: './reading.component.css',
